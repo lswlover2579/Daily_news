@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>晨间情报 · 每日全球财经与时事</title>
+<meta name="description" content="每天早上 5 分钟，看清过去一天的全球财经与时事变化。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23b0432b'/><circle cx='16' cy='19' r='7' fill='%23fbfaf7'/><path d='M16 4v5M6 12l3 3M26 12l-3 3' stroke='%23fbfaf7' stroke-width='2' stroke-linecap='round'/></svg>">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+:root{
+  --bg:#fbfaf7;--panel:#fff;--ink:#15171c;--ink2:#3c414a;--muted:#7a7f88;
+  --line:#e6e1d7;--line2:#f0ece4;--accent:#b0432b;--accent2:#f7ece7;
+  --hi:#1c7a5b;--warn:#9a6a0d;--warnbg:#fdf6e5;--warnline:#f0dfae;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Source Han Sans SC","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+html[data-theme=dark]{
+  --bg:#0f1115;--panel:#151821;--ink:#e8eaee;--ink2:#c2c6ce;--muted:#8b909a;
+  --line:#262b35;--line2:#1c212a;--accent:#e0795f;--accent2:#2a1c18;
+  --hi:#4bbd92;--warn:#e0b055;--warnbg:#221c10;--warnline:#3a2f18;
+}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.62 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:780px;margin:0 auto;padding:0 18px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports (backdrop-filter:blur(1px)){
+  header.top{background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(150%) blur(14px)}
+}
+.bar{display:flex;align-items:center;gap:10px;padding:11px 0 7px}
+.brand{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.mark{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent2);flex:none}
+h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+.sub{font-size:11px;color:var(--muted);letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tools{display:flex;align-items:center;gap:6px;flex:none}
+.btn{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--ink2);background:var(--panel);transition:transform .12s}
+.btn:active{transform:scale(.96)}
+.btn[disabled]{opacity:.5}
+.icon{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);color:var(--muted);display:grid;place-items:center;font-size:13px;background:var(--panel)}
+.meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted);padding-bottom:8px;font-variant-numeric:tabular-nums}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--hi);flex:none}
+.dot.stale{background:var(--warn)}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:1px 0 9px;scrollbar-width:none;-ms-overflow-style:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{white-space:nowrap;font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:var(--panel);transition:background .15s,color .15s}
+.tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tab.kw{color:var(--accent)}
+.tab.kw.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.tabdiv{width:1px;flex:none;background:var(--line);margin:2px 2px}
+
+/* sections */
+.glabel{margin:26px 0 -4px;font-size:10.5px;letter-spacing:.18em;color:var(--muted)}
+.sec{padding:20px 0 4px;border-top:1px solid var(--line2);scroll-margin-top:118px}
+.sec:first-of-type{border-top:0}
+.glabel + .sec{border-top:0}
+.hrow{display:flex;align-items:center;gap:7px}
+.k{color:var(--accent);font-family:var(--mono);font-size:12px;line-height:1}
+h2{font-size:16px;margin:0;font-weight:700;letter-spacing:.01em}
+.sec-n{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.sec-d{margin:3px 0 12px;font-size:11.5px;color:var(--muted)}
+.list{list-style:none;margin:0;padding:0}
+.item{display:flex;gap:9px;padding:13px 0;border-top:1px dotted var(--line)}
+.list > .item:first-child{border-top:0}
+.rk{font-family:var(--mono);font-size:10.5px;color:var(--muted);padding-top:5px;width:15px;flex:none;font-variant-numeric:tabular-nums}
+.bd{min-width:0;flex:1}
+h3{font-size:16px;line-height:1.44;margin:0 0 5px;font-weight:600;letter-spacing:.004em}
+h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.mt{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:11px;color:var(--muted);margin-bottom:6px}
+.src{color:var(--ink2);font-weight:600}
+.sep{color:var(--muted);opacity:.45}
+.also{font-family:var(--mono);font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 4px;line-height:1.5}
+.imp{font-size:7px;letter-spacing:2px;line-height:1;color:var(--line)}
+.imp.i3{color:var(--accent)}
+.imp.i2{color:var(--muted)}
+.tag.sample{font-size:10px;padding:0 5px;border-radius:4px;background:var(--warnbg);color:var(--warn);border:1px solid var(--warnline);line-height:1.6}
+.sm{margin:0 0 8px;font-size:13.8px;line-height:1.66;color:var(--ink2)}
+.mb{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);padding:2px 0}
+.mb i{font-style:normal;display:inline-block;transition:transform .18s;font-size:12px}
+.mb.on{color:var(--ink2)}
+.mb.on i{transform:rotate(45deg)}
+.dp{margin-top:10px;padding:12px 13px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.blk + .blk{margin-top:11px}
+.blk h4{margin:0 0 3px;font-size:10.5px;letter-spacing:.1em;color:var(--muted);font-weight:700}
+.blk p{margin:0;color:var(--ink2);line-height:1.7;font-size:13.4px}
+.imp-blk{padding-left:11px;border-left:2px solid var(--accent)}
+.imp-blk h4{color:var(--accent)}
+.tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:11px}
+.tags span{font-size:10.5px;padding:2px 7px;border-radius:5px;background:var(--line2);color:var(--muted)}
+.note{margin:9px 0 0;font-size:10.5px;color:var(--muted)}
+.daybreak{display:flex;align-items:center;gap:10px;padding:14px 0 5px;margin:0;color:var(--muted);font-size:10.5px;letter-spacing:.1em;list-style:none}
+.daybreak::after{content:"";flex:1;height:1px;background:var(--line)}
+.list > .daybreak:first-child{padding-top:0}
+.empty{color:var(--muted);font-size:13px;padding:4px 0 14px;margin:0}
+.is-read h3 a{color:var(--muted)}
+.is-read .sm{opacity:.7}
+
+/* banner */
+.banner{margin:14px 0 0;padding:10px 12px;border-radius:10px;background:var(--warnbg);border:1px solid var(--warnline);color:var(--warn);font-size:12.5px;line-height:1.6}
+.banner b{font-weight:700}
+.banner code{font-family:var(--mono);font-size:11.5px;background:rgba(0,0,0,.05);padding:0 3px;border-radius:3px}
+html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
+
+/* footer */
+.foot{padding:24px 0 40px;margin-top:22px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted);line-height:1.75}
+.foot p{margin:0 0 8px}
+.foot button{color:var(--ink2);text-decoration:underline;text-underline-offset:2px;font-size:11.5px}
+.foot .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
+
+@media (max-width:360px){
+  .wrap{padding:0 14px}
+  h3{font-size:15.4px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div class="brand">
+        <span class="mark"></span>
+        <h1>晨间情报</h1>
+        <span class="sub" id="dateLabel"></span>
+      </div>
+      <div class="tools">
+        <button class="icon" id="themeBtn" aria-label="切换深浅色">◐</button>
+        <button class="btn" id="refreshBtn">刷新</button>
+      </div>
+    </div>
+    <div class="meta" id="metaLine"></div>
+    <nav class="tabs" id="tabs" aria-label="栏目导航"></nav>
+  </div>
+</header>
+
+<main class="wrap" id="main"></main>
+
+<footer class="wrap foot" id="foot" hidden>
+  <p><b>关于这份晨报</b><br>数据由定时任务从公开 RSS / 新闻检索接口抓取，摘要为原文摘录；“市场影响”为基于公开信息的逻辑推演与观察指标，不构成任何投资建议。</p>
+  <p>点击标题会在本机标记为已读（仅保存在你的浏览器，不上传）。“刷新”只重新拉取 <code>data.json</code>；新闻本身由每天 06:30 的定时任务生成。</p>
+  <div class="links">
+    <button id="clearRead">清除已读标记</button>
+    <button id="onlyUnread">只看未读</button>
+  </div>
+</footer>
+
+<script type="application/json" id="demoData">{
+  "version": 1, "sample": true, "windowHours": 30,
+  "categories": [
+    { "id": "finance", "name": "金融财经", "desc": "股市、汇率、债券、经济数据", "items": [
+      { "id": "d1", "title": "美股三大指数震荡收高，市场等待下一份通胀数据", "url": "", "source": "示例媒体", "publishedAt": "2026-10-31T05:05:00+08:00", "summary": "标普 500 小幅收涨，科技股领涨，成交量低于均值。投资者在通胀数据公布前降低仓位，波动率指数小幅回落。", "context": "本轮财报季整体盈利超预期，但指引分化明显。", "impact": "通胀数据决定降息路径的定价。若核心通胀超预期，成长股估值承压、美元走强；反之则相反。看 2 年期美债与联邦基金期货。", "tags": ["美股", "通胀"], "importance": 3, "alsoCount": 3, "score": 90, "sample": true },
+      { "id": "d2", "title": "10 年期美债收益率回落，美元指数走弱", "url": "", "source": "示例媒体", "publishedAt": "2026-10-31T04:30:00+08:00", "summary": "避险买盘推动美债价格上涨，10 年期收益率下行至近期区间下沿。美元指数同步走低，非美货币普遍反弹。", "context": "", "impact": "实际利率下行是黄金最直接的支撑。若收益率回落源于避险而非降息预期，股市未必受益，需看信用利差是否走阔。", "tags": ["美债", "美元"], "importance": 2, "alsoCount": 1, "score": 82, "sample": true }
+    ]}
+  ],
+  "keywords": [
+    { "id": "gold", "name": "黄金", "desc": "国际金价、央行购金、黄金 ETF", "items": [
+      { "id": "d3", "title": "国际金价站上历史高位，央行购金需求仍强", "url": "", "source": "示例媒体", "publishedAt": "2026-10-31T05:20:00+08:00", "summary": "现货金价刷新纪录，年内涨幅扩大。世界黄金协会数据显示，央行净购金连续多个季度维持高位，新兴市场是主要买家。", "context": "本轮上涨由央行购金、降息预期与地缘风险共同推动。", "impact": "三条主线：美元与实际利率（反向）、央行购金（结构性买盘）、ETF 与投机持仓（情绪）。短线看美元指数与 10 年期实际利率，中线看央行净购金是否延续。", "tags": ["金价", "央行购金"], "importance": 3, "alsoCount": 4, "score": 97, "sample": true },
+      { "id": "d4", "title": "全球黄金 ETF 连续净流入，亚洲基金份额增长最快", "url": "", "source": "示例媒体", "publishedAt": "2026-10-30T22:40:00+08:00", "summary": "月度数据显示全球黄金 ETF 持仓回升，亚洲市场贡献主要增量。北美基金流向由负转正，但仍低于历史峰值。", "context": "", "impact": "ETF 流入是价格趋势的确认指标而非领先指标。若金价新高而 ETF 流入放缓，需警惕动能减弱。", "tags": ["黄金 ETF"], "importance": 2, "alsoCount": 2, "score": 80, "sample": true }
+    ]},
+    { "id": "memory", "name": "内存", "desc": "DRAM、NAND、HBM、存储芯片价格", "items": [
+      { "id": "d5", "title": "HBM 产能被预订至明年，原厂加速转产", "url": "", "source": "示例媒体", "publishedAt": "2026-10-31T04:45:00+08:00", "summary": "主要原厂 HBM 产能已基本锁定，客户预付比例提高。为优先保障 HBM，标准 DRAM 供给进一步收紧。", "context": "HBM 是 AI 加速卡的关键部件，良率与堆叠层数决定供给弹性。", "impact": "供给减少与 AI 需求增加同时发生，是这轮涨价的双引擎。关注 HBM 占原厂产能比重、标准 DRAM 合约价、封测与设备订单。", "tags": ["HBM", "DRAM", "AI"], "importance": 3, "alsoCount": 4, "score": 98, "sample": true },
+      { "id": "d6", "title": "NAND 现货价格止跌回升，模组厂开始补库", "url": "", "source": "示例媒体", "publishedAt": "2026-10-30T21:50:00+08:00", "summary": "渠道数据显示 NAND 现货价格连续两周上涨，模组厂库存降至低位后启动补库。原厂减产效果开始显现。", "context": "", "impact": "NAND 弹性大于 DRAM，但周期也更短。关注原厂减产执行率与企业级 SSD 需求，补库行情可能只有一到两个季度。", "tags": ["NAND", "库存"], "importance": 2, "alsoCount": 2, "score": 79, "sample": true }
+    ]}
+  ]
+}</script>
+<script>
+(function(){
+  'use strict';
+
+  var $ = function(s,r){ return (r||document).querySelector(s); };
+  var D = null;
+  var readSet = new Set();
+  var onlyUnread = false;
+  try { readSet = new Set(JSON.parse(localStorage.getItem('brief.read') || '[]')); } catch(e){}
+
+  var ESC = {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'};
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, function(c){ return ESC[c]; }); }
+  function saveRead(){
+    try { localStorage.setItem('brief.read', JSON.stringify(Array.from(readSet).slice(-800))); } catch(e){}
+  }
+  function norm(s){ return String(s||'').toLowerCase().replace(/[\s\u3000\p{P}\p{S}]/gu,''); }
+  function pad(n){ return (n<10?'0':'')+n; }
+
+  function fmtDate(d){
+    var w = ['周日','周一','周二','周三','周四','周五','周六'][d.getDay()];
+    return d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日 '+w;
+  }
+  function fmtTime(iso){
+    var d = new Date(iso);
+    if (isNaN(d)) return '';
+    var now = new Date();
+    var y = new Date(now.getTime() - 864e5);
+    var hm = pad(d.getHours())+':'+pad(d.getMinutes());
+    if (d.toDateString() === now.toDateString()) return '今天 '+hm;
+    if (d.toDateString() === y.toDateString()) return '昨天 '+hm;
+    return (d.getMonth()+1)+'月'+d.getDate()+'日 '+hm;
+  }
+  function dayKey(iso){
+    var d = new Date(iso);
+    return isNaN(d) ? 'x' : d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate();
+  }
+  function dayLabel(iso){
+    var d = new Date(iso);
+    if (isNaN(d)) return '更早';
+    var now = new Date();
+    var y = new Date(now.getTime() - 864e5);
+    if (d.toDateString() === now.toDateString()) return '今天';
+    if (d.toDateString() === y.toDateString()) return '昨天';
+    return (d.getMonth()+1)+'月'+d.getDate()+'日';
+  }
+  function ageText(h){
+    if (h < 0.15) return '刚刚更新';
+    if (h < 1) return '更新于 ' + Math.max(1, Math.round(h*60)) + ' 分钟前';
+    if (h < 24) return '更新于 ' + Math.round(h) + ' 小时前';
+    return '更新于 ' + Math.round(h/24) + ' 天前';
+  }
+
+  function itemHTML(it, i, showPool){
+    var imp = it.importance || 1;
+    var read = readSet.has(it.id);
+    var title = it.url
+      ? '<a class="t" href="'+esc(it.url)+'" target="_blank" rel="noopener noreferrer">'+esc(it.title)+'</a>'
+      : '<span>'+esc(it.title)+'</span>';
+    var meta = '';
+    if (it.sample) meta += '<span class="tag sample">示例</span>';
+    if (showPool && it._pool) meta += '<span class="src">'+esc(it._pool)+'</span><span class="sep">·</span>';
+    meta += '<span class="src">'+esc(it.source||'未知来源')+'</span>';
+    meta += '<span class="sep">·</span><time datetime="'+esc(it.publishedAt)+'">'+fmtTime(it.publishedAt)+'</time>';
+    if (it.alsoCount > 1) meta += '<span class="also">同题 '+(it.alsoCount-1)+' 家</span>';
+    meta += '<span class="imp i'+imp+'" title="重要程度 '+imp+'/3">'+new Array(imph(imp)+1).join('●')+'</span>';
+
+    var dp = '';
+    if (it.context) dp += '<div class="blk"><h4>背景</h4><p>'+esc(it.context)+'</p></div>';
+    else if (it.excerpt) dp += '<div class="blk"><h4>原文摘录</h4><p>'+esc(it.excerpt)+'</p></div>';
+    if (it.impact) dp += '<div class="blk imp-blk"><h4>市场影响</h4><p>'+esc(it.impact)+'</p></div>';
+    if (it.tags && it.tags.length) dp += '<div class="tags">'+it.tags.map(function(t){ return '<span>'+esc(t)+'</span>'; }).join('')+'</div>';
+    if (it.sample) dp += '<p class="note">示例条目，非真实新闻。</p>';
+
+    var more = dp ? '<button class="mb" type="button" aria-expanded="false"><span>背景与市场影响</span><i>+</i></button><div class="dp" hidden>'+dp+'</div>' : '';
+
+    return '<li class="item'+(read?' is-read':'')+(onlyUnread&&read?' hide-unread':'')+'" data-id="'+esc(it.id)+'">'
+      + '<span class="rk">'+(i+1)+'</span>'
+      + '<div class="bd"><h3>'+title+'</h3>'
+      + '<div class="mt">'+meta+'</div>'
+      + (it.summary ? '<p class="sm">'+esc(it.summary)+'</p>' : '')
+      + more
+      + '</div></li>';
+  }
+  function imph(imp){ return imp>=3?3:(imp===2?2:1); }
+
+  function sectionHTML(pool, id, kind){
+    var items = (pool.items||[]).slice();
+    if (onlyUnread) items = items.filter(function(it){ return !readSet.has(it.id); });
+    var head = '<section class="sec" id="sec-'+esc(id)+'">'
+      + '<div class="hrow"><span class="k">'+(kind==='kw'?'#':'§')+'</span><h2>'+esc(pool.name)+'</h2>'
+      + '<span class="sec-n">'+(items.length||0)+'</span></div>'
+      + '<p class="sec-d">'+esc(pool.desc||'')+'</p>';
+    if (!items.length) {
+      return head + '<p class="empty">'+(onlyUnread?'没有未读条目。':'今日暂无更新。')+'</p></section>';
+    }
+    var body = '<ol class="list">';
+    var prev = '';
+    items.forEach(function(it, i){
+      var dk = dayKey(it.publishedAt);
+      if (dk !== prev) { body += '<li class="daybreak"><span>'+dayLabel(it.publishedAt)+'</span></li>'; prev = dk; }
+      body += itemHTML(it, i, kind === 'top');
+    });
+    body += '</ol>';
+    return head + body + '</section>';
+  }
+
+  function topItems(d){
+    var all = [];
+    (d.categories||[]).concat(d.keywords||[]).forEach(function(p){
+      (p.items||[]).forEach(function(it){ all.push(Object.assign({}, it, {_pool:p.name})); });
+    });
+    all.sort(function(a,b){ return (b.score||0)-(a.score||0) || (new Date(b.publishedAt)-new Date(a.publishedAt)); });
+    var seen = new Set(), out = [];
+    for (var i=0;i<all.length && out.length<10;i++){
+      var k = norm(all[i].title);
+      if (!k || seen.has(k)) continue;
+      seen.add(k); out.push(all[i]);
+    }
+    return out;
+  }
+
+  function render(){
+    var d = D;
+    $('#dateLabel').textContent = fmtDate(new Date());
+    var items = [], sources = {}, seenIds = {};
+    (d.categories||[]).concat(d.keywords||[]).forEach(function(p){
+      (p.items||[]).forEach(function(it){
+        if (!seenIds[it.id]) { seenIds[it.id] = 1; items.push(it); }
+        if (it.source) sources[it.source]=1;
+      });
+    });
+    var gen = d.generatedAt ? new Date(d.generatedAt) : null;
+    var ageH = gen && !isNaN(gen) ? (Date.now()-gen.getTime())/36e5 : 999;
+    var fresh = ageH < 20;
+    var parts = ['<span class="dot'+(fresh?'':' stale')+'"></span>',
+      '<span>'+(gen?ageText(ageH):'数据时间未知')+'</span>','<span class="sep">·</span>',
+      '<span>'+items.length+' 条</span>'];
+    if (Object.keys(sources).length > 1) parts.push('<span class="sep">·</span><span>'+Object.keys(sources).length+' 家来源</span>');
+    if (d.windowHours) parts.push('<span class="sep">·</span><span>时间窗 '+(d.windowHours<24?d.windowHours+' 小时':Math.round(d.windowHours/24)+' 天')+'</span>');
+    $('#metaLine').innerHTML = parts.join('');
+
+    var tabs = ['<button class="tab on" data-go="sec-top">总览</button>'];
+    (d.categories||[]).forEach(function(p){ tabs.push('<button class="tab" data-go="sec-'+esc(p.id)+'">'+esc(p.name)+'</button>'); });
+    tabs.push('<span class="tabdiv"></span>');
+    (d.keywords||[]).forEach(function(p){ tabs.push('<button class="tab kw" data-go="sec-'+esc(p.id)+'">#'+esc(p.name)+'</button>'); });
+    $('#tabs').innerHTML = tabs.join('');
+
+    var html = '';
+    if (d.demoFallback) {
+      html += '<div class="banner"><b>离线版式演示</b> · 这里只有 6 条内置示例，不是真实新闻。'
+        + '部署到 GitHub Pages 后，页面会自动读取 data.json 显示当日资讯。'
+        + (lastError ? '<br><span style="opacity:.75">读取 data.json 失败：' + esc(lastError) + '</span>' : '') + '</div>';
+    } else if (d.sample) {
+      html += '<div class="banner"><b>示例数据</b> · 这一版用于预览版式与交互，条目不是真实新闻。'
+        + '运行一次抓取（GitHub Actions 或 <code>node fetch-news.mjs</code>）后会自动替换为当日真实资讯。</div>';
+    }
+    if (ageH >= 20 && !d.sample) {
+      html += '<div class="banner">数据已有 ' + Math.round(ageH/24) + ' 天未更新，自动任务可能失败了。请到仓库 Actions 页面查看运行日志。</div>';
+    }
+    html += sectionHTML({name:'今日要闻', desc:'跨栏目精选 · 按重要程度排序', items: topItems(d)}, 'top', 'top');
+    html += '<div class="glabel">每日综合新闻</div>';
+    (d.categories||[]).forEach(function(p){ html += sectionHTML(p, p.id, 'cat'); });
+    html += '<div class="glabel">个人关键词追踪</div>';
+    (d.keywords||[]).forEach(function(p){ html += sectionHTML(p, p.id, 'kw'); });
+    $('#main').innerHTML = html;
+    $('#foot').hidden = false;
+    spy();
+  }
+
+  function showError(err){
+    $('#metaLine').innerHTML = '<span class="dot stale"></span><span>数据加载失败</span>';
+    $('#main').innerHTML = '<div class="banner"><b>读不到 data.json</b><br>'
+      + '原因：' + esc(err && err.message ? err.message : 'unknown') + '<br><br>'
+      + '排查：<br>1. 确认 <code>data.json</code> 和 <code>index.html</code> 在同一目录；<br>'
+      + '2. 不要用 <code>file://</code> 直接打开，请在目录里运行 <code>python3 -m http.server 8080</code> 再访问 <code>localhost:8080</code>；<br>'
+      + '3. 部署到 GitHub Pages 后刷新一次。</div>';
+  }
+
+  function spy(){
+    var secs = Array.prototype.slice.call(document.querySelectorAll('.sec'));
+    if (!secs.length) return;
+    var cur = secs[0];
+    secs.forEach(function(s){ if (s.getBoundingClientRect().top <= 130) cur = s; });
+    var tabs = document.querySelectorAll('.tab');
+    Array.prototype.forEach.call(tabs, function(t){ t.classList.toggle('on', t.getAttribute('data-go') === cur.id); });
+  }
+
+  // events
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.mb');
+    if (b){
+      var dp = b.nextElementSibling;
+      if (dp){ var open = !dp.hidden; dp.hidden = open; b.classList.toggle('on', !open); b.setAttribute('aria-expanded', String(!open)); }
+      return;
+    }
+    var a = e.target.closest('a.t');
+    if (a){
+      var li = a.closest('.item');
+      if (li && li.dataset.id){ readSet.add(li.dataset.id); li.classList.add('is-read'); saveRead(); }
+    }
+    var tab = e.target.closest('.tab');
+    if (tab){
+      var el = document.getElementById(tab.getAttribute('data-go'));
+      if (el){
+        var y = el.getBoundingClientRect().top + window.pageYOffset - 112;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  });
+
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){ ticking = false; spy(); });
+  }, { passive: true });
+
+  // theme
+  function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); try { localStorage.setItem('brief.theme', t); } catch(e){} }
+  (function(){
+    var saved = null;
+    try { saved = localStorage.getItem('brief.theme'); } catch(e){}
+    if (saved) applyTheme(saved);
+    else if (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) applyTheme('dark');
+  })();
+  $('#themeBtn').addEventListener('click', function(){
+    applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  $('#clearRead').addEventListener('click', function(){
+    readSet.clear(); saveRead();
+    document.querySelectorAll('.item').forEach(function(li){ li.classList.remove('is-read'); });
+  });
+  $('#onlyUnread').addEventListener('click', function(){
+    onlyUnread = !onlyUnread;
+    this.textContent = onlyUnread ? '显示全部' : '只看未读';
+    if (D) render();
+  });
+
+  var loading = false;
+  var lastError = '';
+  function loadDemo(){
+    try {
+      var el = document.getElementById('demoData');
+      return el ? JSON.parse(el.textContent) : null;
+    } catch (e) { return null; }
+  }
+  async function boot(){
+    if (loading) return;
+    loading = true;
+    var btn = $('#refreshBtn');
+    btn.disabled = true; btn.textContent = '刷新中';
+    try {
+      var r = await fetch('data.json?ts=' + Date.now(), { cache: 'no-store' });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      D = await r.json();
+      render();
+    } catch (err){
+      lastError = err && err.message ? err.message : String(err);
+      var demo = loadDemo();
+      if (demo){
+        D = demo; D.demoFallback = true; D.generatedAt = new Date().toISOString();
+        render();
+      } else {
+        showError(err);
+      }
+    } finally {
+      loading = false; btn.disabled = false; btn.textContent = '刷新';
+    }
+  }
+  $('#refreshBtn').addEventListener('click', boot);
+  boot();
+})();
+</script>
+</body>
+</html>

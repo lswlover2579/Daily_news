@@ -1,0 +1,131 @@
+{
+  "settings": {
+    "windowHours": 30,
+    "perPool": 10,
+    "maxPerFeed": 12,
+    "providers": ["bing", "google"]
+  },
+
+  "categories": [
+    {
+      "id": "cn",
+      "name": "国内社会",
+      "desc": "民生、政策、重大事件",
+      "queries": ["国内 民生 政策", "国务院 部署 会议"],
+      "feeds": [
+        { "source": "澎湃新闻", "url": "https://feedx.net/rss/thepaper.xml", "weight": 2 },
+        { "source": "界面新闻", "url": "https://a.jiemian.com/index.php?m=article&a=rss", "weight": 2 },
+        { "source": "中新网", "url": "https://www.chinanews.com.cn/rss/scroll-news.xml", "weight": 2 }
+      ]
+    },
+    {
+      "id": "intl",
+      "name": "国际社会",
+      "desc": "国际局势、外交、重大事件",
+      "queries": ["国际局势 外交 冲突", "联合国 停火 谈判"],
+      "feeds": [
+        { "source": "BBC World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "weight": 3 },
+        { "source": "The Guardian", "url": "https://www.theguardian.com/world/rss", "weight": 2 },
+        { "source": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "weight": 2 }
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "金融财经",
+      "desc": "股市、汇率、债券、经济数据",
+      "queries": ["A股 汇率 债市", "美联储 利率 通胀 数据"],
+      "feeds": [
+        { "source": "CNBC", "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html", "weight": 3 },
+        { "source": "MarketWatch", "url": "http://feeds.marketwatch.com/marketwatch/topstories/", "weight": 2 },
+        { "source": "BBC Business", "url": "https://feeds.bbci.co.uk/news/business/rss.xml", "weight": 2 }
+      ]
+    },
+    {
+      "id": "mil",
+      "name": "军事国防",
+      "desc": "军演、武器装备、冲突",
+      "queries": ["军事演习 航母 部署", "国防部 军演 回应"],
+      "feeds": [
+        { "source": "Defense News", "url": "https://www.defensenews.com/arc/outboundfeeds/rss/", "weight": 3 }
+      ]
+    },
+    {
+      "id": "tech",
+      "name": "科技互联网",
+      "desc": "AI、机器人、科技公司",
+      "queries": ["人工智能 大模型 芯片", "科技公司 发布 新品"],
+      "feeds": [
+        { "source": "36氪", "url": "https://36kr.com/feed", "weight": 3 },
+        { "source": "机器之心", "url": "https://www.jiqizhixin.com/rss", "weight": 3 },
+        { "source": "量子位", "url": "https://www.qbitai.com/feed", "weight": 2 },
+        { "source": "TechCrunch", "url": "https://techcrunch.com/feed/", "weight": 2 },
+        { "source": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "weight": 2 }
+      ]
+    },
+    {
+      "id": "industry",
+      "name": "产业经济",
+      "desc": "能源、制造业、半导体、资源",
+      "queries": ["半导体 能源 制造业", "铜 稀土 锂 价格"],
+      "feeds": [
+        { "source": "Mining.com", "url": "https://www.mining.com/feed/", "weight": 2 },
+        { "source": "OilPrice", "url": "https://oilprice.com/rss/main", "weight": 2 },
+        { "source": "钛媒体", "url": "https://www.tmtpost.com/rss.xml", "weight": 2 }
+      ]
+    },
+    {
+      "id": "policy",
+      "name": "政策宏观",
+      "desc": "中国政策、全球经济政策",
+      "queries": ["宏观政策 央行 财政", "政策 出台 指导意见"],
+      "feeds": []
+    }
+  ],
+
+  "keywords": [
+    {
+      "id": "gold",
+      "name": "黄金",
+      "desc": "国际金价、央行购金、黄金 ETF、金矿企业、供需变化",
+      "match": ["黄金", "金价", "购金", "金矿", "gold", "bullion"],
+      "queries": ["黄金 金价 央行购金", "gold price central bank buying"],
+      "feeds": [
+        { "source": "Mining.com", "url": "https://www.mining.com/feed/", "weight": 2 }
+      ]
+    },
+    {
+      "id": "drill",
+      "name": "军演",
+      "desc": "中国及全球军事演习、航母动态、军事部署",
+      "match": ["军演", "演习", "航母", "战备警巡", "军事部署", "exercise", "carrier"],
+      "queries": ["军演 航母 军事部署", "military exercise carrier"],
+      "feeds": [
+        { "source": "Defense News", "url": "https://www.defensenews.com/arc/outboundfeeds/rss/", "weight": 2 }
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "内存",
+      "desc": "DRAM、NAND、HBM、存储芯片价格、长鑫科技等",
+      "match": ["内存", "存储", "闪存", "DRAM", "NAND", "HBM", "长鑫", "长江存储", "美光", "海力士", "三星电子"],
+      "queries": ["DRAM NAND HBM 价格", "存储芯片 涨价 扩产"],
+      "feeds": []
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "desc": "大模型、AI 芯片、算力、AI 应用、行业竞争",
+      "match": ["人工智能", "大模型", "算力", "AI", "GPU", "英伟达", "OpenAI", "Anthropic"],
+      "queries": ["大模型 AI 芯片 算力", "OpenAI NVIDIA AI chip"],
+      "feeds": []
+    },
+    {
+      "id": "taiwan",
+      "name": "台湾",
+      "desc": "两岸关系、台海局势、台湾政策及经济动态",
+      "match": ["台湾", "台海", "两岸", "台北", "台积电", "Taiwan", "TSMC"],
+      "queries": ["台海 两岸 台湾", "Taiwan strait TSMC"],
+      "feeds": []
+    }
+  ]
+}
