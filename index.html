@@ -42,20 +42,19 @@ h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.02em;white-space:nowr
 .btn:active{transform:scale(.96)}
 .btn[disabled]{opacity:.5}
 .icon{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);color:var(--muted);display:grid;place-items:center;font-size:13px;background:var(--panel)}
-.meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted);padding-bottom:8px;font-variant-numeric:tabular-nums}
+.meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted);padding:9px 0 0;font-variant-numeric:tabular-nums}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--hi);flex:none}
 .dot.stale{background:var(--warn)}
-.tabs{display:flex;gap:6px;overflow-x:auto;padding:1px 0 9px;scrollbar-width:none;-ms-overflow-style:none}
-.tabs::-webkit-scrollbar{display:none}
-.tab{white-space:nowrap;font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:var(--panel);transition:background .15s,color .15s}
+.tabs{display:flex;flex-wrap:wrap;gap:5px;padding:0 0 10px}
+.tab{white-space:nowrap;font-size:12px;line-height:1.75;padding:2px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:var(--panel);transition:background .15s,color .15s}
 .tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .tab.kw{color:var(--accent)}
 .tab.kw.on{background:var(--accent);border-color:var(--accent);color:#fff}
-.tabdiv{width:1px;flex:none;background:var(--line);margin:2px 2px}
+.tabbr{flex:0 0 100%;height:0}
 
 /* sections */
 .glabel{margin:26px 0 -4px;font-size:10.5px;letter-spacing:.18em;color:var(--muted)}
-.sec{padding:20px 0 4px;border-top:1px solid var(--line2);scroll-margin-top:118px}
+.sec{padding:20px 0 4px;border-top:1px solid var(--line2);scroll-margin-top:150px}
 .sec:first-of-type{border-top:0}
 .glabel + .sec{border-top:0}
 .hrow{display:flex;align-items:center;gap:7px}
@@ -69,6 +68,10 @@ h2{font-size:16px;margin:0;font-weight:700;letter-spacing:.01em}
 .rk{font-family:var(--mono);font-size:10.5px;color:var(--muted);padding-top:5px;width:15px;flex:none;font-variant-numeric:tabular-nums}
 .bd{min-width:0;flex:1}
 h3{font-size:16px;line-height:1.44;margin:0 0 5px;font-weight:600;letter-spacing:.004em}
+.ttlrow{display:flex;align-items:flex-start;gap:8px}
+.ttlrow h3{flex:1;min-width:0}
+.copy{flex:none;margin-top:2px;font-size:10.5px;line-height:1.75;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 7px;background:var(--panel);transition:color .15s,border-color .15s,background .15s}
+.copy:active{background:var(--accent2);color:var(--accent);border-color:var(--accent)}
 h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .mt{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:11px;color:var(--muted);margin-bottom:6px}
 .src{color:var(--ink2);font-weight:600}
@@ -110,6 +113,8 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
 .foot p{margin:0 0 8px}
 .foot button{color:var(--ink2);text-decoration:underline;text-underline-offset:2px;font-size:11.5px}
 .foot .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
+.toast{position:fixed;left:50%;bottom:30px;z-index:60;transform:translateX(-50%) translateY(8px);background:var(--ink);color:var(--bg);font-size:12.5px;padding:6px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 @media (max-width:360px){
   .wrap{padding:0 14px}
@@ -135,12 +140,14 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
         <button class="btn" id="refreshBtn">刷新</button>
       </div>
     </div>
-    <div class="meta" id="metaLine"></div>
     <nav class="tabs" id="tabs" aria-label="栏目导航"></nav>
   </div>
 </header>
 
+<div class="wrap"><div class="meta" id="metaLine"></div></div>
+
 <main class="wrap" id="main"></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <footer class="wrap foot" id="foot" hidden>
   <p><b>关于这份晨报</b><br>数据由定时任务从公开 RSS / 新闻检索接口抓取，摘要为原文摘录；“市场影响”为基于公开信息的逻辑推演与观察指标，不构成任何投资建议。</p>
@@ -157,7 +164,10 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
     { "id": "finance", "name": "金融财经", "desc": "股市、汇率、债券、经济数据", "items": [
       { "id": "d1", "title": "美股三大指数震荡收高，市场等待下一份通胀数据", "url": "", "source": "示例媒体", "publishedAt": "2026-10-31T05:05:00+08:00", "summary": "标普 500 小幅收涨，科技股领涨，成交量低于均值。投资者在通胀数据公布前降低仓位，波动率指数小幅回落。", "context": "本轮财报季整体盈利超预期，但指引分化明显。", "impact": "通胀数据决定降息路径的定价。若核心通胀超预期，成长股估值承压、美元走强；反之则相反。看 2 年期美债与联邦基金期货。", "tags": ["美股", "通胀"], "importance": 3, "alsoCount": 3, "score": 90, "sample": true },
       { "id": "d2", "title": "10 年期美债收益率回落，美元指数走弱", "url": "", "source": "示例媒体", "publishedAt": "2026-10-31T04:30:00+08:00", "summary": "避险买盘推动美债价格上涨，10 年期收益率下行至近期区间下沿。美元指数同步走低，非美货币普遍反弹。", "context": "", "impact": "实际利率下行是黄金最直接的支撑。若收益率回落源于避险而非降息预期，股市未必受益，需看信用利差是否走阔。", "tags": ["美债", "美元"], "importance": 2, "alsoCount": 1, "score": 82, "sample": true }
-    ]}
+    ]},
+    { "id": "cn", "name": "国内社会", "desc": "民生、政策、重大事件", "items": [] },
+    { "id": "mil", "name": "军事国防", "desc": "军演、武器装备、冲突", "items": [] },
+    { "id": "tech", "name": "科技互联网", "desc": "AI、机器人、科技公司", "items": [] }
   ],
   "keywords": [
     { "id": "gold", "name": "黄金", "desc": "国际金价、央行购金、黄金 ETF", "items": [
@@ -167,6 +177,10 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
     { "id": "memory", "name": "内存", "desc": "DRAM、NAND、HBM、存储芯片价格", "items": [
       { "id": "d5", "title": "HBM 产能被预订至明年，原厂加速转产", "url": "", "source": "示例媒体", "publishedAt": "2026-10-31T04:45:00+08:00", "summary": "主要原厂 HBM 产能已基本锁定，客户预付比例提高。为优先保障 HBM，标准 DRAM 供给进一步收紧。", "context": "HBM 是 AI 加速卡的关键部件，良率与堆叠层数决定供给弹性。", "impact": "供给减少与 AI 需求增加同时发生，是这轮涨价的双引擎。关注 HBM 占原厂产能比重、标准 DRAM 合约价、封测与设备订单。", "tags": ["HBM", "DRAM", "AI"], "importance": 3, "alsoCount": 4, "score": 98, "sample": true },
       { "id": "d6", "title": "NAND 现货价格止跌回升，模组厂开始补库", "url": "", "source": "示例媒体", "publishedAt": "2026-10-30T21:50:00+08:00", "summary": "渠道数据显示 NAND 现货价格连续两周上涨，模组厂库存降至低位后启动补库。原厂减产效果开始显现。", "context": "", "impact": "NAND 弹性大于 DRAM，但周期也更短。关注原厂减产执行率与企业级 SSD 需求，补库行情可能只有一到两个季度。", "tags": ["NAND", "库存"], "importance": 2, "alsoCount": 2, "score": 79, "sample": true }
+    ]},
+    { "id": "rates", "name": "加息", "desc": "央行加息、利率决议、全球紧缩", "items": [
+      { "id": "d7", "title": "美联储会议纪要显示部分官员支持进一步加息", "url": "", "source": "示例媒体", "publishedAt": "2026-10-31T03:10:00+08:00", "summary": "纪要显示通胀回落进程停滞，多位与会者认为若数据不配合，可能需要进一步收紧政策。市场随之下调降息押注。", "context": "这是本轮周期中首次出现明显的鹰派分歧。", "impact": "加息预期升温通常推高美债收益率与美元，压制黄金和成长股估值。看 2 年期美债与联邦基金期货隐含路径，而不是单次表态。", "tags": ["美联储", "加息"], "importance": 3, "alsoCount": 3, "score": 92, "sample": true },
+      { "id": "d8", "title": "日本央行加息，日元短线走强", "url": "", "source": "示例媒体", "publishedAt": "2026-10-30T20:30:00+08:00", "summary": "央行将政策利率上调，称工资与物价的良性循环正在形成。行长强调后续将视数据渐进调整，不预设路径。", "context": "", "impact": "日元加息会收窄套息交易利差，平仓时放大全球风险资产波动。关注日债收益率曲线与跨境资金流。", "tags": ["日本央行", "日元"], "importance": 2, "alsoCount": 2, "score": 80, "sample": true }
     ]}
   ]
 }</script>
@@ -184,6 +198,49 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
   function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, function(c){ return ESC[c]; }); }
   function saveRead(){
     try { localStorage.setItem('brief.read', JSON.stringify(Array.from(readSet).slice(-800))); } catch(e){}
+  }
+
+  var IDX = {};
+  var toastTimer = null;
+  function toast(msg){
+    var t = document.getElementById('toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 1600);
+  }
+  function legacyCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch(e){}
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function copyText(text){
+    if (navigator.clipboard && window.isSecureContext){
+      return navigator.clipboard.writeText(text).then(function(){ return true; }).catch(function(){ return legacyCopy(text); });
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+  function payload(it){
+    var lines = [it.title];
+    if (it.summary) lines.push(it.summary);
+    var meta = [];
+    if (it._pool) meta.push(it._pool);
+    if (it.source) meta.push(it.source);
+    var t = fmtTime(it.publishedAt);
+    if (t) meta.push(t);
+    if (meta.length) lines.push(meta.join(' · '));
+    if (it.url) lines.push(it.url);
+    return lines.join('\n');
   }
   function norm(s){ return String(s||'').toLowerCase().replace(/[\s\u3000\p{P}\p{S}]/gu,''); }
   function pad(n){ return (n<10?'0':'')+n; }
@@ -247,7 +304,8 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
 
     return '<li class="item'+(read?' is-read':'')+(onlyUnread&&read?' hide-unread':'')+'" data-id="'+esc(it.id)+'">'
       + '<span class="rk">'+(i+1)+'</span>'
-      + '<div class="bd"><h3>'+title+'</h3>'
+      + '<div class="bd"><div class="ttlrow"><h3>'+title+'</h3>'
+      + '<button class="copy" type="button" data-id="'+esc(it.id)+'" aria-label="复制这条新闻" title="复制标题、摘要与链接">复制</button></div>'
       + '<div class="mt">'+meta+'</div>'
       + (it.summary ? '<p class="sm">'+esc(it.summary)+'</p>' : '')
       + more
@@ -263,7 +321,7 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
       + '<span class="sec-n">'+(items.length||0)+'</span></div>'
       + '<p class="sec-d">'+esc(pool.desc||'')+'</p>';
     if (!items.length) {
-      return head + '<p class="empty">'+(onlyUnread?'没有未读条目。':'今日暂无更新。')+'</p></section>';
+      return head + '<p class="empty">'+(onlyUnread?'没有未读条目。':((D&&D.demoFallback)?'离线演示未填充这一栏，部署后自动更新。':'今日暂无更新。'))+'</p></section>';
     }
     var body = '<ol class="list">';
     var prev = '';
@@ -313,13 +371,18 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
 
     var tabs = ['<button class="tab on" data-go="sec-top">总览</button>'];
     (d.categories||[]).forEach(function(p){ tabs.push('<button class="tab" data-go="sec-'+esc(p.id)+'">'+esc(p.name)+'</button>'); });
-    tabs.push('<span class="tabdiv"></span>');
+    tabs.push('<span class="tabbr"></span>');
     (d.keywords||[]).forEach(function(p){ tabs.push('<button class="tab kw" data-go="sec-'+esc(p.id)+'">#'+esc(p.name)+'</button>'); });
     $('#tabs').innerHTML = tabs.join('');
 
+    IDX = {};
+    (d.categories||[]).concat(d.keywords||[]).forEach(function(p){
+      (p.items||[]).forEach(function(it){ if (!IDX[it.id]) IDX[it.id] = Object.assign({_pool:p.name}, it); });
+    });
+
     var html = '';
     if (d.demoFallback) {
-      html += '<div class="banner"><b>离线版式演示</b> · 这里只有 6 条内置示例，不是真实新闻。'
+      html += '<div class="banner"><b>离线版式演示</b> · 这里只有少量内置示例，不是真实新闻。'
         + '部署到 GitHub Pages 后，页面会自动读取 data.json 显示当日资讯。'
         + (lastError ? '<br><span style="opacity:.75">读取 data.json 失败：' + esc(lastError) + '</span>' : '') + '</div>';
     } else if (d.sample) {
@@ -348,17 +411,27 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
       + '3. 部署到 GitHub Pages 后刷新一次。</div>';
   }
 
+  function headerH(){ var h = document.querySelector('header.top'); return h ? h.offsetHeight : 120; }
   function spy(){
     var secs = Array.prototype.slice.call(document.querySelectorAll('.sec'));
     if (!secs.length) return;
     var cur = secs[0];
-    secs.forEach(function(s){ if (s.getBoundingClientRect().top <= 130) cur = s; });
+    var line = headerH() + 24;
+    secs.forEach(function(s){ if (s.getBoundingClientRect().top <= line) cur = s; });
     var tabs = document.querySelectorAll('.tab');
     Array.prototype.forEach.call(tabs, function(t){ t.classList.toggle('on', t.getAttribute('data-go') === cur.id); });
   }
 
   // events
   document.addEventListener('click', function(e){
+    var cp = e.target.closest('.copy');
+    if (cp){
+      var item = IDX[cp.getAttribute('data-id')];
+      if (item){
+        copyText(payload(item)).then(function(ok){ toast(ok ? '已复制标题与链接' : '复制失败，请长按标题'); });
+      }
+      return;
+    }
     var b = e.target.closest('.mb');
     if (b){
       var dp = b.nextElementSibling;
@@ -374,7 +447,7 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
     if (tab){
       var el = document.getElementById(tab.getAttribute('data-go'));
       if (el){
-        var y = el.getBoundingClientRect().top + window.pageYOffset - 112;
+        var y = el.getBoundingClientRect().top + window.pageYOffset - headerH() - 12;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     }
