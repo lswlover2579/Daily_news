@@ -126,6 +126,14 @@
       "match": ["台湾", "台海", "两岸", "台北", "台积电", "Taiwan", "TSMC"],
       "queries": ["台海 两岸 台湾", "Taiwan strait TSMC"],
       "feeds": []
+    },
+    {
+      "id": "rates",
+      "name": "加息",
+      "desc": "央行加息、利率决议、全球紧缩与债市反应",
+      "match": ["加息", "利率决议", "紧缩", "联邦基金利率", "rate hike", "rate decision"],
+      "queries": ["加息 利率决议 央行", "central bank rate hike decision"],
+      "feeds": []
     }
   ]
 }
