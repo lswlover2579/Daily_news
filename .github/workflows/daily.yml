@@ -2,7 +2,13 @@
 # GitHub 网页端：Add file → Create new file → 文件名输入 .github/workflows/daily.yml → 粘贴本文件内容
 name: 每日情报更新
 
-   # 支持手动点一下立即更新
+on:
+  schedule:
+    # UTC 22:30 = 北京时间次日 06:30
+    - cron: "30 22 * * *"
+    # UTC 09:00 = 北京时间 17:00
+    - cron: "0 9 * * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
