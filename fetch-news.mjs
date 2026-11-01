@@ -9,6 +9,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { notifyNewItems } from './notify-news.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const CONFIG = JSON.parse(await readFile(join(ROOT, 'feeds.json'), 'utf8'));
@@ -429,8 +430,19 @@ async function llmEnrich(items) {
 
 /* ---------------- 主流程 ---------------- */
 
+function itemKeys(data) {
+  const pools = [...(data.categories || []), ...(data.keywords || [])];
+  return new Set(pools.flatMap((pool) => pool.items || []).map((item) =>
+    item.url ? `url:${item.url}` : `id:${item.id || item.title}`));
+}
+
 async function main() {
   const started = Date.now();
+  let previousKeys = new Set();
+  if (!DRY) {
+    try { previousKeys = itemKeys(JSON.parse(await readFile(join(ROOT, 'data.json'), 'utf8'))); }
+    catch { /* first run or missing data.json: all fetched items are considered new */ }
+  }
   const now = new Date();
   const cutoff = now.getTime() - S.windowHours * 36e5;
 
@@ -610,7 +622,22 @@ async function main() {
   }
   await writeFile(join(ROOT, 'data.json'), json, 'utf8');
 
+  const notificationItems = [];
+  const notifiedKeys = new Set();
+  for (const item of all) {
+    const key = item.url ? `url:${item.url}` : `id:${item.id || item.title}`;
+    if (!previousKeys.has(key) && !notifiedKeys.has(key)) {
+      notifiedKeys.add(key);
+      notificationItems.push(item);
+    }
+  }
   console.log(`[5/5] 已写入 data.json：${all.length} 条 / ${sources.size} 家来源，用时 ${((Date.now() - started) / 1000).toFixed(1)}s`);
+  if (process.env.NOTIFY_ENABLED === 'true') {
+    try { await notifyNewItems(notificationItems); }
+    catch (e) { console.error(`[通知失败] ${e.message}`); }
+  } else {
+    console.log('[通知] 已关闭（设置 NOTIFY_ENABLED=true 可开启）。');
+  }
   for (const p of categories.concat(keywords)) console.log(`  · ${p.name}  ${p.items.length} 条`);
   if (feedErrors.length) console.log('\n部分源失败：\n' + feedErrors.slice(0, 8).join('\n'));
 }
