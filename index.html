@@ -45,7 +45,9 @@ h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.02em;white-space:nowr
 .meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted);padding:8px 0 0;font-variant-numeric:tabular-nums}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--hi);flex:none}
 .dot.stale{background:var(--warn)}
-.tabs{display:flex;flex-wrap:wrap;gap:5px;padding:10px 0 2px}
+.tabsbar{position:sticky;top:var(--hh,48px);z-index:19;background:var(--bg);transition:transform .22s ease,opacity .22s ease}
+.tabsbar.hide{transform:translateY(-140%);opacity:0;pointer-events:none}
+.tabs{display:flex;flex-wrap:wrap;gap:5px;padding:10px 0 8px}
 .tab{white-space:nowrap;font-size:12px;line-height:1.75;padding:2px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:var(--panel);transition:background .15s,color .15s}
 .tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .tab.kw{color:var(--accent)}
@@ -117,6 +119,10 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
 .foot .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
 .toast{position:fixed;left:50%;bottom:30px;z-index:60;transform:translateX(-50%) translateY(8px);background:var(--ink);color:var(--bg);font-size:12.5px;padding:6px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.totop{position:fixed;left:0;top:0;z-index:45;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--ink2);display:grid;place-items:center;font-size:20px;line-height:1;box-shadow:0 4px 14px rgba(0,0,0,.14);opacity:0;pointer-events:none;transition:opacity .18s;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;cursor:grab}
+.totop.show{opacity:1;pointer-events:auto}
+.totop.drag{cursor:grabbing;box-shadow:0 8px 22px rgba(0,0,0,.24)}
+.totop:active{background:var(--accent2);color:var(--accent);border-color:var(--accent)}
 
 @media (max-width:360px){
   .wrap{padding:0 14px}
@@ -145,10 +151,11 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
   </div>
 </header>
 
-<div class="wrap"><nav class="tabs" id="tabs" aria-label="栏目导航"></nav></div>
+<div class="tabsbar" id="tabsBar"><div class="wrap"><nav class="tabs" id="tabs" aria-label="栏目导航"></nav></div></div>
 <div class="wrap"><div class="meta" id="metaLine"></div></div>
 
 <main class="wrap" id="main"></main>
+<button class="totop" id="toTop" type="button" aria-label="回到顶部">↑</button>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <footer class="wrap foot" id="foot" hidden>
@@ -451,6 +458,8 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
     if (tab){
       var el = document.getElementById(tab.getAttribute('data-go'));
       if (el){
+        navLock = performance.now() + 900;
+        setNav(true);
         var y = el.getBoundingClientRect().top + window.pageYOffset - headerH() - 12;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
@@ -458,10 +467,43 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
   });
 
   var ticking = false;
+  var lastY = window.pageYOffset;
+  var lastDir = 0;
+  var navLock = 0;
+  function setNav(hide){
+    var b = document.getElementById('tabsBar');
+    if (b) b.classList.toggle('hide', hide);
+  }
+  if (window.pageYOffset > 140) setNav(true);
+  function syncHeader(){
+    var h = headerH();
+    document.documentElement.style.setProperty('--hh', h + 'px');
+  }
+  syncHeader();
+  window.addEventListener('resize', syncHeader);
+  function onScroll(){
+    var y = window.pageYOffset;
+    if (y < 40) { navLock = 0; lastDir = 0; setNav(false); }
+    else {
+      var dy = y - lastY;
+      if (Math.abs(dy) > 6){
+        var dir = dy > 0 ? 1 : -1;
+        if (dir !== lastDir){
+          lastDir = dir;
+          setNav(dir === 1 && y > 140);
+        }
+        lastY = y;
+      }
+      if (performance.now() < navLock) setNav(true);
+    }
+    var tt = document.getElementById('toTop');
+    if (tt) tt.classList.toggle('show', y > 600);
+    spy();
+  }
   window.addEventListener('scroll', function(){
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(function(){ ticking = false; spy(); });
+    requestAnimationFrame(function(){ ticking = false; onScroll(); });
   }, { passive: true });
 
   // theme
@@ -517,6 +559,82 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
       loading = false; btn.disabled = false; btn.textContent = '刷新';
     }
   }
+  // 回到顶部悬浮球：可拖动，位置记忆
+  var topBtn = document.getElementById('toTop');
+  var BTN_SIZE = 46;
+  var SNAP_EDGE = true;          // 松手吸附左右边缘；改成 false 就是完全自由
+  var dragging = false, moved = false, sx = 0, sy = 0, ox = 0, oy = 0, suppressClick = 0;
+
+  function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+  function setBtnPos(x, y){
+    var vw = window.innerWidth, vh = window.innerHeight;
+    var minY = headerH() + 8;
+    topBtn.style.left = Math.round(clamp(x, 8, vw - BTN_SIZE - 8)) + 'px';
+    topBtn.style.top = Math.round(clamp(y, minY, vh - BTN_SIZE - 8)) + 'px';
+  }
+  function saveBtnPos(){
+    try {
+      localStorage.setItem('brief.btn', JSON.stringify({
+        x: parseInt(topBtn.style.left, 10) || 0,
+        y: parseInt(topBtn.style.top, 10) || 0
+      }));
+    } catch(e){}
+  }
+  (function initBtnPos(){
+    var p = null;
+    try { p = JSON.parse(localStorage.getItem('brief.btn') || 'null'); } catch(e){}
+    if (!p || typeof p.x !== 'number' || typeof p.y !== 'number'){
+      p = { x: window.innerWidth - BTN_SIZE - 14, y: Math.round(window.innerHeight * 0.6) };
+    }
+    setBtnPos(p.x, p.y);
+  })();
+
+  topBtn.addEventListener('pointerdown', function(e){
+    if (e.button && e.button !== 0) return;
+    var r = topBtn.getBoundingClientRect();
+    dragging = true; moved = false;
+    ox = e.clientX - r.left; oy = e.clientY - r.top;
+    sx = e.clientX; sy = e.clientY;
+    topBtn.classList.add('drag');
+    try { topBtn.setPointerCapture(e.pointerId); } catch(err){}
+  });
+  topBtn.addEventListener('pointermove', function(e){
+    if (!dragging) return;
+    if (!moved && Math.abs(e.clientX - sx) + Math.abs(e.clientY - sy) > 6) moved = true;
+    if (!moved) return;
+    e.preventDefault();
+    setBtnPos(e.clientX - ox, e.clientY - oy);
+  });
+  function endDrag(){
+    if (!dragging) return;
+    dragging = false;
+    topBtn.classList.remove('drag');
+    if (moved){
+      suppressClick = Date.now() + 400;
+      if (SNAP_EDGE){
+        var r = topBtn.getBoundingClientRect();
+        var toLeft = (r.left + BTN_SIZE / 2) < window.innerWidth / 2;
+        setBtnPos(toLeft ? 12 : window.innerWidth - BTN_SIZE - 12, r.top);
+      }
+      saveBtnPos();
+    }
+  }
+  topBtn.addEventListener('pointerup', endDrag);
+  topBtn.addEventListener('pointercancel', endDrag);
+
+  topBtn.addEventListener('click', function(){
+    if (Date.now() < suppressClick) return;
+    navLock = performance.now() + 700;
+    setNav(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('resize', function(){
+    var r = topBtn.getBoundingClientRect();
+    setBtnPos(r.left, r.top);
+    saveBtnPos();
+  });
+
   $('#refreshBtn').addEventListener('click', boot);
   boot();
 })();
