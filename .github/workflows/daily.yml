@@ -1,12 +1,9 @@
-# ⚠️ 请把这个文件放到仓库的  .github/workflows/daily.yml
-# GitHub 网页端：Add file → Create new file → 文件名输入 .github/workflows/daily.yml → 粘贴本文件内容
+# 放到仓库的 .github/workflows/daily.yml
 name: 每日情报更新
 
 on:
   schedule:
-    # UTC 22:30 = 北京时间次日 06:30（GitHub 定时任务可能延迟几分钟到半小时）
-    - cron: "30 22 * * *"
-    # UTC 09:00 = 北京时间 17:00
+    # UTC
     - cron: "0 0,3,7,12,21 * * *"
   workflow_dispatch: {}   # 支持手动点一下立即更新
 
@@ -34,6 +31,16 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
+          # 通知开关与渠道：Variables 中设置 NOTIFY_ENABLED=true 和 NOTIFY_CHANNELS=telegram（或 feishu,email）
+          NOTIFY_ENABLED: ${{ vars.NOTIFY_ENABLED }}
+          NOTIFY_CHANNELS: ${{ vars.NOTIFY_CHANNELS }}
+          # 按所选渠道配置对应 Secrets；未使用的渠道可以留空
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: node fetch-news.mjs
 
       - name: 提交数据
