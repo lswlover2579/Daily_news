@@ -4,11 +4,11 @@ name: 每日情报更新
 
 on:
   schedule:
-    # UTC 22:30 = 北京时间次日 06:30
+    # UTC 22:30 = 北京时间次日 06:30（GitHub 定时任务可能延迟几分钟到半小时）
     - cron: "30 22 * * *"
     # UTC 09:00 = 北京时间 17:00
     - cron: "0 9 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # 支持手动点一下立即更新
 
 permissions:
   contents: write
