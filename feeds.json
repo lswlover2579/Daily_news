@@ -3,7 +3,9 @@
     "windowHours": 30,
     "perPool": 10,
     "maxPerFeed": 12,
-    "providers": ["bing", "google"]
+    "providers": ["bing", "google"],
+    "translate": true,
+    "translateMax": 60
   },
 
   "categories": [
@@ -133,6 +135,56 @@
       "desc": "央行加息、利率决议、全球紧缩与债市反应",
       "match": ["加息", "利率决议", "紧缩", "联邦基金利率", "rate hike", "rate decision"],
       "queries": ["加息 利率决议 央行", "central bank rate hike decision"],
+      "feeds": []
+    },
+    {
+      "id": "routes",
+      "name": "航线",
+      "desc": "国际航线恢复、绕行、运力与运价",
+      "match": ["航线", "复航", "直航", "绕行", "运力", "air route", "flight route", "shipping route"],
+      "queries": ["航线 复航 增班 开通", "红海 绕行 航线 运价"],
+      "feeds": []
+    },
+    {
+      "id": "surcharge",
+      "name": "燃油附加费",
+      "desc": "航空燃油附加费调整、航油价格",
+      "match": ["燃油附加费", "燃油费", "附加费", "fuel surcharge"],
+      "queries": ["燃油附加费 上调 下调", "航空 燃油附加费 航油"],
+      "feeds": []
+    },
+    {
+      "id": "copper",
+      "name": "铜",
+      "desc": "铜价、铜精矿、库存与冶炼",
+      "match": ["铜价", "铜精矿", "精铜", "铜矿", "copper"],
+      "queries": ["铜价 铜精矿 库存", "copper price inventory"],
+      "feeds": [
+        { "source": "Mining.com", "url": "https://www.mining.com/feed/", "weight": 2 }
+      ]
+    },
+    {
+      "id": "hog",
+      "name": "生猪",
+      "desc": "猪价、能繁母猪、养殖利润与期货",
+      "match": ["生猪", "能繁母猪", "仔猪", "养殖利润", "live hog"],
+      "queries": ["生猪 价格 产能 能繁母猪", "生猪期货 养殖利润"],
+      "feeds": []
+    },
+    {
+      "id": "pork",
+      "name": "猪肉",
+      "desc": "猪肉价格、消费、进口与 CPI",
+      "match": ["猪肉", "白条猪", "猪价", "pork"],
+      "queries": ["猪肉 价格 消费 CPI", "猪肉 进口 价格"],
+      "feeds": []
+    },
+    {
+      "id": "vaccine",
+      "name": "疫苗",
+      "desc": "疫苗研发、批签发、接种与采购",
+      "match": ["疫苗", "接种", "批签发", "mRNA", "vaccine"],
+      "queries": ["疫苗 研发 接种 批签发", "疫苗 采购 行业"],
       "feeds": []
     }
   ]

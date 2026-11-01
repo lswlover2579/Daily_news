@@ -42,10 +42,10 @@ h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.02em;white-space:nowr
 .btn:active{transform:scale(.96)}
 .btn[disabled]{opacity:.5}
 .icon{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);color:var(--muted);display:grid;place-items:center;font-size:13px;background:var(--panel)}
-.meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted);padding:9px 0 0;font-variant-numeric:tabular-nums}
+.meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted);padding:8px 0 0;font-variant-numeric:tabular-nums}
 .dot{width:5px;height:5px;border-radius:50%;background:var(--hi);flex:none}
 .dot.stale{background:var(--warn)}
-.tabs{display:flex;flex-wrap:wrap;gap:5px;padding:0 0 10px}
+.tabs{display:flex;flex-wrap:wrap;gap:5px;padding:10px 0 2px}
 .tab{white-space:nowrap;font-size:12px;line-height:1.75;padding:2px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink2);background:var(--panel);transition:background .15s,color .15s}
 .tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .tab.kw{color:var(--accent)}
@@ -54,7 +54,7 @@ h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.02em;white-space:nowr
 
 /* sections */
 .glabel{margin:26px 0 -4px;font-size:10.5px;letter-spacing:.18em;color:var(--muted)}
-.sec{padding:20px 0 4px;border-top:1px solid var(--line2);scroll-margin-top:150px}
+.sec{padding:20px 0 4px;border-top:1px solid var(--line2);scroll-margin-top:70px}
 .sec:first-of-type{border-top:0}
 .glabel + .sec{border-top:0}
 .hrow{display:flex;align-items:center;gap:7px}
@@ -69,7 +69,9 @@ h2{font-size:16px;margin:0;font-weight:700;letter-spacing:.01em}
 .bd{min-width:0;flex:1}
 h3{font-size:16px;line-height:1.44;margin:0 0 5px;font-weight:600;letter-spacing:.004em}
 .ttlrow{display:flex;align-items:flex-start;gap:8px}
-.ttlrow h3{flex:1;min-width:0}
+.ttl-main{flex:1;min-width:0}
+.zh{margin:-1px 0 5px;font-size:12.6px;line-height:1.5;color:var(--muted)}
+.zh a:hover{text-decoration:underline;text-underline-offset:2px}
 .copy{flex:none;margin-top:2px;font-size:10.5px;line-height:1.75;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 7px;background:var(--panel);transition:color .15s,border-color .15s,background .15s}
 .copy:active{background:var(--accent2);color:var(--accent);border-color:var(--accent)}
 h3 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
@@ -140,10 +142,10 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
         <button class="btn" id="refreshBtn">刷新</button>
       </div>
     </div>
-    <nav class="tabs" id="tabs" aria-label="栏目导航"></nav>
   </div>
 </header>
 
+<div class="wrap"><nav class="tabs" id="tabs" aria-label="栏目导航"></nav></div>
 <div class="wrap"><div class="meta" id="metaLine"></div></div>
 
 <main class="wrap" id="main"></main>
@@ -232,6 +234,7 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
   }
   function payload(it){
     var lines = [it.title];
+    if (it.titleZh) lines.push(it.titleZh);
     if (it.summary) lines.push(it.summary);
     var meta = [];
     if (it._pool) meta.push(it._pool);
@@ -304,8 +307,9 @@ html[data-theme=dark] .banner code{background:rgba(255,255,255,.08)}
 
     return '<li class="item'+(read?' is-read':'')+(onlyUnread&&read?' hide-unread':'')+'" data-id="'+esc(it.id)+'">'
       + '<span class="rk">'+(i+1)+'</span>'
-      + '<div class="bd"><div class="ttlrow"><h3>'+title+'</h3>'
-      + '<button class="copy" type="button" data-id="'+esc(it.id)+'" aria-label="复制这条新闻" title="复制标题、摘要与链接">复制</button></div>'
+      + '<div class="bd"><div class="ttlrow"><div class="ttl-main"><h3>'+title+'</h3>'
+      + (it.titleZh ? '<p class="zh">' + (it.url ? '<a class="t" href="'+esc(it.url)+'" target="_blank" rel="noopener noreferrer">'+esc(it.titleZh)+'</a>' : esc(it.titleZh)) + '</p>' : '')
+      + '</div><button class="copy" type="button" data-id="'+esc(it.id)+'" aria-label="复制这条新闻" title="复制标题、摘要与链接">复制</button></div>'
       + '<div class="mt">'+meta+'</div>'
       + (it.summary ? '<p class="sm">'+esc(it.summary)+'</p>' : '')
       + more

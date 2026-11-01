@@ -315,6 +315,67 @@ function makeSummary(desc, max = 110) {
   return out;
 }
 
+/* ---------------- 英文标题翻译（免费接口，失败自动跳过） ---------------- */
+
+function isEnglishTitle(t) {
+  const s = String(t || '');
+  if (s.length < 8) return false;
+  const cjk = (s.match(/[\u4e00-\u9fff]/g) || []).length;
+  const latin = (s.match(/[A-Za-z]/g) || []).length;
+  return cjk === 0 && latin >= 10;
+}
+
+async function translateText(text) {
+  const q = encodeURIComponent(text.slice(0, 400));
+  try {
+    const res = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-CN&dt=t&q=' + q, {
+      headers: { 'user-agent': UA },
+      signal: AbortSignal.timeout(12000),
+    });
+    if (res.ok) {
+      const j = await res.json();
+      const out = (Array.isArray(j) && Array.isArray(j[0]) ? j[0] : [])
+        .map((seg) => (seg && seg[0]) || '').join('').trim();
+      if (out && /[\u4e00-\u9fff]/.test(out)) return out;
+    }
+  } catch (e) { /* 换备用接口 */ }
+
+  try {
+    const res = await fetch('https://api.mymemory.translated.net/get?q=' + q + '&langpair=en|zh-CN', {
+      headers: { 'user-agent': UA },
+      signal: AbortSignal.timeout(12000),
+    });
+    if (res.ok) {
+      const j = await res.json();
+      const out = decode(j && j.responseData ? j.responseData.translatedText : '').trim();
+      if (out && /[\u4e00-\u9fff]/.test(out)) return out;
+    }
+  } catch (e) { /* 放弃，保留英文 */ }
+
+  return '';
+}
+
+async function translateTitles(items, limit) {
+  const groups = new Map();
+  for (const it of items) {
+    if (it.titleZh || !isEnglishTitle(it.title)) continue;
+    if (!groups.has(it.title)) groups.set(it.title, []);
+    groups.get(it.title).push(it);
+  }
+  const titles = [...groups.keys()].slice(0, limit);
+  if (!titles.length) return 0;
+
+  console.log(`[3/5] 翻译英文标题 ${titles.length} 条…`);
+  let ok = 0;
+  await mapLimit(titles, 3, async (t) => {
+    const zh = await translateText(t);
+    if (!zh) return;
+    for (const it of groups.get(t)) it.titleZh = zh;
+    ok++;
+  });
+  return ok;
+}
+
 /* ---------------- 可选：LLM 摘要 ---------------- */
 
 const LLM_PROMPT = '你是中文财经编辑。根据给定标题与原文摘要，输出严格 JSON：'
@@ -389,7 +450,7 @@ async function main() {
   for (const c of CONFIG.categories) for (const q of c.queries || []) for (const p of S.providers) queries.push({ pool: c.id, q, provider: p });
   for (const k of CONFIG.keywords) for (const q of k.queries || []) for (const p of S.providers) queries.push({ pool: k.id, q, provider: p });
 
-  console.log(`[1/4] 抓取 ${feedMap.size} 个 RSS、${queries.length} 个检索请求…`);
+  console.log(`[1/5] 抓取 ${feedMap.size} 个 RSS、${queries.length} 个检索请求…`);
 
   let feedsOk = 0, feedsFailed = 0;
   const raw = [];
@@ -435,7 +496,7 @@ async function main() {
     }
   }
 
-  console.log(`[2/4] RSS 成功 ${feedsOk} / 失败 ${feedsFailed}；检索成功 ${queryOk} / ${queries.length}`);
+  console.log(`[2/5] RSS 成功 ${feedsOk} / 失败 ${feedsFailed}；检索成功 ${queryOk} / ${queries.length}`);
 
   // 3. 时间窗过滤 + 关键词跨栏目捞取
   const inWindow = (it) => {
@@ -509,13 +570,16 @@ async function main() {
     process.exit(1);
   }
 
-  // 5. 可选 AI 增强（按 URL 去重，优先高分条目）
+  // 5. 英文标题翻译（免费接口；失败保留英文，不影响出报）
+  const zhCount = S.translate === false ? 0 : await translateTitles(all, Number(S.translateMax || 60));
+
+  // 6. 可选 AI 增强（按 URL 去重，优先高分条目）
   const uniq = new Map();
   for (const it of all.slice().sort((a, b) => (b.score || 0) - (a.score || 0))) {
     if (it.url && !uniq.has(it.url)) uniq.set(it.url, it);
   }
   const aiCount = await llmEnrich([...uniq.values()]);
-  if (aiCount) console.log(`[3/4] AI 摘要完成 ${aiCount} 条`);
+  if (aiCount) console.log(`[4/5] AI 摘要完成 ${aiCount} 条`);
   for (const it of all) delete it.desc;
 
   // 6. 输出
@@ -532,6 +596,7 @@ async function main() {
       feedsFailed,
       queries: queries.length,
       queriesOk: queryOk,
+      translated: zhCount,
       ai: aiCount,
     },
     categories,
@@ -545,7 +610,7 @@ async function main() {
   }
   await writeFile(join(ROOT, 'data.json'), json, 'utf8');
 
-  console.log(`[4/4] 已写入 data.json：${all.length} 条 / ${sources.size} 家来源，用时 ${((Date.now() - started) / 1000).toFixed(1)}s`);
+  console.log(`[5/5] 已写入 data.json：${all.length} 条 / ${sources.size} 家来源，用时 ${((Date.now() - started) / 1000).toFixed(1)}s`);
   for (const p of categories.concat(keywords)) console.log(`  · ${p.name}  ${p.items.length} 条`);
   if (feedErrors.length) console.log('\n部分源失败：\n' + feedErrors.slice(0, 8).join('\n'));
 }
