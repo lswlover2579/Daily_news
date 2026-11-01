@@ -1,15 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-01T01:23:04.065Z",
+  "generatedAt": "2026-11-01T02:57:08.013Z",
   "windowHours": 30,
   "sample": false,
   "stats": {
-    "items": 72,
-    "sources": 7,
+    "items": 80,
+    "sources": 14,
     "feedsOk": 18,
     "feedsFailed": 0,
-    "queries": 52,
-    "queriesOk": 52,
+    "queries": 76,
+    "queriesOk": 76,
+    "translated": 39,
     "ai": 0
   },
   "categories": [
@@ -19,170 +20,165 @@
       "desc": "民生、政策、重大事件",
       "items": [
         {
-          "title": "中瑞自贸协定升级 瑞士商会人士看好合作新机遇",
-          "url": "https://www.chinanews.com.cn/cj/2026/11-01/10724153.shtml",
-          "publishedAt": "2026-11-01T01:14:21.000Z",
+          "title": "乘联分会崔东树：中国主流车企在欧洲市场表现极其突出",
+          "url": "https://www.jiemian.com/article/15278510.html",
+          "publishedAt": "2026-11-01T01:29:45.000Z",
           "source": "未知来源",
-          "score": 38,
-          "summary": "中新网海口11月1日电 (记者 王子谦)“对于瑞士而言，最有价值的不仅是降低关税，更重要的在于拓展服务贸易和准入、生产性服务的相互认可及合格评定、人工智能和可持续发展等，这是向前迈进的重要一步。",
-          "excerpt": "中新网海口11月1日电 (记者 王子谦)“对于瑞士而言，最有价值的不仅是降低关税，更重要的在于拓展服务贸易和准入、生产性服务的相互认可及合格评定、人工智能和可持续发展等，这是向前迈进的重要一步。”中国瑞士商会名誉主席、瑞士华南商会会长马丁·穆勒10月31日在海口说。",
+          "score": 45,
+          "summary": "11月1日，乘联分会秘书长崔东树发文称，从公开数据看，2026年前9个月中国对欧盟汽车出口高达183万辆，已远超去年全年，9月单月与累计同比分别飙升128%和87%，中国对欧盟汽车出口呈现规模跃升与结构极致分化的总体特征，中国汽车产业的全球崛起势头日益明显。",
+          "excerpt": "11月1日，乘联分会秘书长崔东树发文称，从公开数据看，2026年前9个月中国对欧盟汽车出口高达183万辆，已远超去年全年，9月单月与累计同比分别飙升128%和87%，中国对欧盟汽车出口呈现规模跃升与结构极致分化的总体特征，中国汽车产业的全球崛起势头日益明显。中国对欧盟汽车出口的动力赛道快速变化，2026年插混（PHEV）成为最强引擎，出口暴涨372%；纯电（BEV）在高关税重压下仍实现近两倍增长；普混（HEV）则作为稳健防线大增91%。车企马太效应凸显：比亚迪呈断层式领跑，吉利、奇瑞、零跑等高速狂飙，中国主流车企在欧洲市场表现极其突出，证明中国主流车企的内外兼修，强势增长。",
           "tags": [
-            "AI",
-            "算力",
             "贸易",
             "供给"
           ],
-          "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
+          "impact": "贸易管制直接改变供给曲线：受限环节涨价与国产替代同时发生。关注许可证细则、生效时间与过渡期，这决定冲击是一次性的还是持续的。",
           "alsoCount": 1,
           "importance": 3,
-          "id": "d06a70ab2bd3",
+          "id": "ace1bf52a2ff",
           "context": "",
           "ai": false
         },
         {
-          "title": "失守江浙市场，会稽山三季度业绩为何“双降”？",
-          "url": "https://www.jiemian.com/article/15278094.html",
-          "publishedAt": "2026-11-01T01:00:00.000Z",
+          "title": "朝鲜进行重要武器系统威力评估试验",
+          "url": "https://www.chinanews.com.cn/gj/2026/11-01/10724189.shtml",
+          "publishedAt": "2026-11-01T02:37:42.000Z",
           "source": "未知来源",
-          "score": 32,
-          "summary": "会稽山在大本营江浙市场出现收缩，产品端纯正五年承压，拖累三季度整体表现。",
+          "score": 42,
+          "summary": "中新网11月1日电 据朝中社11月1日报道，朝鲜导弹总局10月31日进行了战术弹道导弹散布战斗部威力评估试验。",
           "excerpt": "",
           "tags": [],
           "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
           "alsoCount": 1,
           "importance": 3,
-          "id": "ba1785da307c",
+          "id": "7a1ad5106d16",
           "context": "",
           "ai": false
         },
         {
-          "title": "亚运冠军高晓彬与青少年分享武术经历",
-          "url": "https://www.chinanews.com.cn/ty/2026/11-01/10724150.shtml",
-          "publishedAt": "2026-11-01T01:15:41.000Z",
+          "title": "小鹏集团10月交付新车50237台，创单月新高",
+          "url": "https://www.jiemian.com/article/15278541.html",
+          "publishedAt": "2026-11-01T02:16:29.000Z",
           "source": "未知来源",
-          "score": 28,
-          "summary": "中新网深圳11月1日电 (记者 张璐)记者10月31日从广东省社会体育和训练竞赛中心获悉，2026年粤港澳大湾区青少年武术套路比赛期间，“立德树人——青少年体育第一课”在深圳举行，100余名青少年运动员、教练员、裁判员及家长参加活动。",
-          "excerpt": "中新网深圳11月1日电 (记者 张璐)记者10月31日从广东省社会体育和训练竞赛中心获悉，2026年粤港澳大湾区青少年武术套路比赛期间，“立德树人——青少年体育第一课”在深圳举行，100余名青少年运动员、教练员、裁判员及家长参加活动。现场，亚运冠军高晓彬与青少年分享对武术精神与文化的理解。",
+          "score": 36,
+          "summary": "11月1日，小鹏集团公布最新交付成绩：2026年10月，小鹏集团共交付新车50,237台，环比增长22%，同比增长20%，创单月交付量历史新高。",
+          "excerpt": "11月1日，小鹏集团公布最新交付成绩：2026年10月，小鹏集团共交付新车50,237台，环比增长22%，同比增长20%，创单月交付量历史新高。其中，海外市场交付13,326台，同比增长166%，创海外市场单月交付量历史新高。",
           "tags": [],
           "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
           "alsoCount": 1,
           "importance": 2,
-          "id": "58641ad9c485",
+          "id": "629524363f14",
           "context": "",
           "ai": false
         },
         {
-          "title": "流感高发季来临 专家提醒：儿童防护莫松懈 尽早接种疫苗",
-          "url": "https://www.chinanews.com.cn/jk/2026/11-01/10724155.shtml",
-          "publishedAt": "2026-11-01T01:13:45.000Z",
+          "title": "歼-20首次公开亮相10周年，盘点威龙高光时刻！",
+          "url": "https://www.chinanews.com.cn/gn/2026/11-01/10724195.shtml",
+          "publishedAt": "2026-11-01T02:54:29.000Z",
           "source": "未知来源",
           "score": 28,
-          "summary": "中新网南宁11月1日电(记者 黄艳梅)随着秋冬季流行性感冒(简称“流感”)高发期来临，儿童流感防护成为家长关注的重点。",
-          "excerpt": "中新网南宁11月1日电(记者 黄艳梅)随着秋冬季流行性感冒(简称“流感”)高发期来临，儿童流感防护成为家长关注的重点。广西南宁市第二妇幼保健院儿科副主任医师黄毅毅10月31日接受记者采访介绍，部分儿童感染流感后可能出现肺炎等并发症，家长不能掉以轻心。接种流感疫苗是预防流感、降低重症风险的重要措施。",
+          "summary": "2016年11月1日，第十一届中国航展上，我国自主研制的新一代隐身战机歼-20，第一次飞向公众视野，短短一分钟的飞行展示惊艳全场。",
+          "excerpt": "2016年11月1日，第十一届中国航展上，我国自主研制的新一代隐身战机歼-20，第一次飞向公众视野，短短一分钟的飞行展示惊艳全场。十年奋飞砺剑，威龙振翅长空。从最初惊鸿一瞥的亮相，到列装部队、海天砺兵，再到家族谱系不断丰富、探索智能化空战新方向，一个个镌刻在蓝天之上的时间节点，完整记录着歼-20从科研样机成长为空军主战尖刀的跨越之路。",
           "tags": [],
           "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
           "alsoCount": 1,
           "importance": 2,
-          "id": "c4edcba257cf",
+          "id": "9812bb4a488d",
           "context": "",
           "ai": false
         },
         {
-          "title": "医生和AI说的不一样，该听谁的？",
-          "url": "https://www.chinanews.com.cn/ll/2026/11-01/10724160.shtml",
-          "publishedAt": "2026-11-01T01:12:01.000Z",
+          "title": "涉电动自行车3C认证、儿童用品强制性国标等 一批新规今起施行",
+          "url": "https://www.chinanews.com.cn/sh/2026/11-01/10724193.shtml",
+          "publishedAt": "2026-11-01T02:51:30.000Z",
           "source": "未知来源",
           "score": 28,
-          "summary": "“大夫，您说的咋和AI不一样啊？”“医生，AI说我这个病还能这么治，您看看对不对？”随着人工智能技术的普及，越来越多患者带着AI的“诊断”走进诊室。",
-          "excerpt": "“大夫，您说的咋和AI不一样啊？”“医生，AI说我这个病还能这么治，您看看对不对？”随着人工智能技术的普及，越来越多患者带着AI的“诊断”走进诊室。患者愿意带着问题来，本身不是坏事。多问一句、多搜几次，说明健康素养在提升；信息多一个来源，心里也少一分忐忑。但听归听，最后信谁的，得想清楚。",
-          "tags": [
-            "AI",
-            "算力"
-          ],
-          "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
-          "alsoCount": 1,
-          "importance": 2,
-          "id": "b5211888eeb6",
-          "context": "",
-          "ai": false
-        },
-        {
-          "title": "“巅峰湖南·2026”收官赛落户桑植 助力老区“体育+”融合发展",
-          "url": "https://www.chinanews.com.cn/ty/2026/11-01/10724149.shtml",
-          "publishedAt": "2026-11-01T01:11:51.000Z",
-          "source": "未知来源",
-          "score": 28,
-          "summary": "中新网张家界11月1日电 (曾诗莹)“巅峰湖南·2026”登山赛收官站——桑植站10月31日在张家界市桑植县南滩国家草原自然公园鸣枪开跑，这也是“巅峰湖南”2026赛季的收官之战。",
+          "summary": "今天起，一批新规将正式施行，涉及社会民生多个领域。",
           "excerpt": "",
           "tags": [],
           "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
           "alsoCount": 1,
           "importance": 2,
-          "id": "d044febf96a6",
+          "id": "662463d1d86a",
           "context": "",
           "ai": false
         },
         {
-          "title": "提醒！2027国考今起报名确认",
-          "url": "https://www.chinanews.com.cn/edu/2026/11-01/10724157.shtml",
-          "publishedAt": "2026-11-01T01:09:35.000Z",
+          "title": "老年人脾气大变“像换了个人”，要警惕心身共病",
+          "url": "https://www.chinanews.com.cn/jk/2026/11-01/10724191.shtml",
+          "publishedAt": "2026-11-01T02:46:48.000Z",
           "source": "未知来源",
           "score": 28,
-          "summary": "2027国考通过用人单位资格审查345万人。国家公务员局郑重提醒，国考资格过审后记得确认才能参加考试。",
-          "excerpt": "2027国考通过用人单位资格审查345万人。国家公务员局郑重提醒，国考资格过审后记得确认才能参加考试。11月1日至11月6日期间，登录“中央机关及其直属机构2027年度考试录用公务员专题网站”进行报名确认和缴费，后续再按规定时间打印准考证并参加考试。",
-          "tags": [],
-          "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
-          "alsoCount": 2,
-          "importance": 1,
-          "id": "7a8bbc84cf28",
-          "context": "",
-          "ai": false
-        },
-        {
-          "title": "2026视觉健康创新发展国际秋季会议在温州举行",
-          "url": "https://www.chinanews.com.cn/jk/2026/11-01/10724140.shtml",
-          "publishedAt": "2026-11-01T01:09:31.000Z",
-          "source": "未知来源",
-          "score": 28,
-          "summary": "中新网温州11月1日电(张益聪)“科技变革、产业革命、医学发展的深入交流，共同推动智慧眼科迈入高质量发展快车道。",
-          "excerpt": "中新网温州11月1日电(张益聪)“科技变革、产业革命、医学发展的深入交流，共同推动智慧眼科迈入高质量发展快车道。”10月30日，2026视觉健康创新发展国际会议(Vision China秋季·温州)在浙江省温州市龙湾区开幕，中国工程院院士、中国医师协会眼科医师分会会长范先群在现场如是说。",
+          "summary": "朝“问”健康丨老年人脾气大变“像换了个人”，要警惕心身共病",
+          "excerpt": "",
           "tags": [],
           "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
           "alsoCount": 1,
-          "importance": 1,
-          "id": "55cc4ef294f7",
+          "importance": 2,
+          "id": "d3f7d18db87c",
           "context": "",
           "ai": false
         },
         {
-          "title": "中国发明创新成果亮相纽伦堡国际发明展",
-          "url": "http://www.chinanews.com.cn/tp/hd2011/2026/11-01/1209347.shtml",
-          "publishedAt": "2026-11-01T01:08:40.000Z",
+          "title": "2026年全国人口变动情况抽样调查来了！一图读懂→",
+          "url": "https://www.chinanews.com.cn/sh/2026/11-01/10724190.shtml",
+          "publishedAt": "2026-11-01T02:38:40.000Z",
           "source": "未知来源",
           "score": 28,
-          "summary": "",
+          "summary": "2026年全国人口变动情况抽样调查来了！读懂1%，看见100%(附长图解读)",
           "excerpt": "",
           "tags": [],
           "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
           "alsoCount": 1,
           "importance": 1,
-          "id": "0921239d6115",
+          "id": "f6d296c1ecfd",
           "context": "",
           "ai": false
         },
         {
-          "title": "聚焦医险协同 2026全生命周期健康创新发展论坛在穗举行",
-          "url": "https://www.chinanews.com.cn/dwq/2026/11-01/10724148.shtml",
-          "publishedAt": "2026-11-01T01:07:35.000Z",
+          "title": "2026年世界城市日全球主场活动暨第四届全球可持续发展城市奖（上海奖）颁奖活动在福州举行",
+          "url": "https://www.chinanews.com.cn/tp/2026/11-01/10724186.shtml",
+          "publishedAt": "2026-11-01T02:38:36.000Z",
           "source": "未知来源",
           "score": 28,
-          "summary": "中新网广州11月1日电 (记者 郭军)2026全生命周期健康创新发展论坛10月31日在广州南沙举行。",
-          "excerpt": "中新网广州11月1日电 (记者 郭军)2026全生命周期健康创新发展论坛10月31日在广州南沙举行。论坛以“全生命周期·全场景守护·高质量发展”为主题，吸引政产学研各界约200位嘉宾，围绕医险协同、全流程健康管理和多元健康产业合作展开研讨。",
+          "summary": "10月31日，2026年世界城市日全球主场活动暨第四届全球可持续发展城市奖（上海奖）颁奖活动在福建省福州市举行。图为开幕式文艺演出。",
+          "excerpt": "10月31日，2026年世界城市日全球主场活动暨第四届全球可持续发展城市奖（上海奖）颁奖活动在福建省福州市举行。图为开幕式文艺演出。中新社记者 吕明 摄 10月31日，2026年世界城市日全球主场活动暨第四届全球可持续发展城市奖（上海奖）颁奖活动在福建省福州市举行。波兰·卡托维兹、中国·景德镇、土耳其·伊斯坦布尔、哥伦比亚·圣地亚哥德卡利、埃塞俄比亚·亚的斯亚贝巴5个城市获第四届全球可持续发展城市奖（上海奖）。图为埃塞尔比亚的获奖代表在会场内合影。中新社记者 吕明 摄 10月31日，2026年世界城市日全球主场活动暨第四届全球可持续发展城市奖（上海奖）颁奖活动在福建省福州市举行。图为城市对话环节。中新社记者 吕明 摄 10月31日，2026年世界城市日全球主场活动暨第四届全球可持续发展城市奖（上海奖）颁奖活动在福建省福州市举行。图为联合国人居署执行主任罗斯巴赫在开幕式上致辞。中新社记者 吕明 摄 10月31日，2026年世界城市",
           "tags": [],
           "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
           "alsoCount": 1,
           "importance": 1,
-          "id": "9f360bc0e2c8",
+          "id": "de3d41ae80e3",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "史上最大IPO要来了？先别急着鼓掌",
+          "url": "https://www.chinanews.com.cn/cj/2026/11-01/10724185.shtml",
+          "publishedAt": "2026-11-01T02:34:32.000Z",
+          "source": "未知来源",
+          "score": 28,
+          "summary": "2万亿美元。",
+          "excerpt": "",
+          "tags": [],
+          "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
+          "alsoCount": 1,
+          "importance": 1,
+          "id": "158a15fbdcdf",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "习近平主席特使、国家体育总局局长高志丹出席第四届青奥会开幕式",
+          "url": "https://www.chinanews.com.cn/gn/2026/11-01/10724184.shtml",
+          "publishedAt": "2026-11-01T02:34:26.000Z",
+          "source": "未知来源",
+          "score": 28,
+          "summary": "2026年10月31日，应塞内加尔共和国政府邀请，习近平主席特使、国家体育总局局长高志丹在塞内加尔首都达喀尔出席第四届青奥会开幕式。",
+          "excerpt": "",
+          "tags": [],
+          "impact": "对市场多为情绪与预期层面影响，关注后续政策细则与落地节奏。",
+          "alsoCount": 1,
+          "importance": 1,
+          "id": "cbb3ba3b6997",
           "context": "",
           "ai": false
         }
@@ -194,11 +190,28 @@
       "desc": "国际局势、外交、重大事件",
       "items": [
         {
+          "title": "Shops looted as German cost of living protests turn violent",
+          "url": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
+          "publishedAt": "2026-11-01T01:59:57.000Z",
+          "source": "未知来源",
+          "score": 36,
+          "summary": "Police in Frankfurt say \"violent riots\" took place in the city centre, with unrest also reported in Berlin, Hamburg and Cologne.",
+          "excerpt": "",
+          "tags": [],
+          "impact": "国际事件先影响风险偏好与避险资产，再传导至供应链与大宗商品。",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "de77300dcc63",
+          "context": "",
+          "ai": false,
+          "titleZh": "随着德国生活费用抗议活动转为暴力，商店遭到抢劫"
+        },
+        {
           "title": "How the downfall of Serbia's Vučiċ mirrored that of Hungary's Orbán",
           "url": "https://www.bbc.co.uk/news/articles/c893z699q401o?at_medium=RSS&at_campaign=rss",
           "publishedAt": "2026-11-01T00:55:06.000Z",
           "source": "未知来源",
-          "score": 36,
+          "score": 35,
           "summary": "Defeat for Serbia's Aleksandar Vučiċ in last weekend's vote was a carbon copy of Viktor Orbán's fall in Hungary.",
           "excerpt": "",
           "tags": [],
@@ -207,7 +220,8 @@
           "importance": 3,
           "id": "385c23b64dd4",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "塞尔维亚武契的垮台如何反映出匈牙利奥尔班的垮台"
         },
         {
           "title": "India's opposition set to hold mega rally seeking election chief's resignation",
@@ -220,10 +234,11 @@
           "tags": [],
           "impact": "国际事件先影响风险偏好与避险资产，再传导至供应链与大宗商品。",
           "alsoCount": 1,
-          "importance": 3,
+          "importance": 2,
           "id": "8fa2de342312",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "印度反对派将举行大型集会，要求选举主席辞职"
         },
         {
           "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
@@ -239,14 +254,15 @@
           "importance": 2,
           "id": "641fcec3e146",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "加密货币公司Binance在遭受63亿美元黑客攻击后弥补了90%的损失"
         },
         {
           "title": "Thousands demonstrate in Paris as protests spread across Europe",
           "url": "https://www.bbc.co.uk/news/videos/ck0j0y87j303o?at_medium=RSS&at_campaign=rss",
           "publishedAt": "2026-10-31T21:29:01.000Z",
           "source": "未知来源",
-          "score": 34,
+          "score": 33,
           "summary": "More than 320,000 people demonstrated across France against the rising cost of living and poor public services…",
           "excerpt": "More than 320,000 people demonstrated across France against the rising cost of living and poor public services, with clashes between some protesters and police.",
           "tags": [],
@@ -255,14 +271,15 @@
           "importance": 2,
           "id": "3ef1a8112a73",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "随着抗议活动遍布欧洲，成千上万的人在巴黎示威"
         },
         {
           "title": "'We came back from hell', say Ukrainians after years in Russia-occupied front-line city",
           "url": "https://www.bbc.co.uk/news/articles/cqglw3k7djp1o?at_medium=RSS&at_campaign=rss",
           "publishedAt": "2026-10-31T19:22:26.000Z",
           "source": "未知来源",
-          "score": 33,
+          "score": 32,
           "summary": "One evacuated couple says they crossed minefields in Oleshky in search of food.",
           "excerpt": "",
           "tags": [],
@@ -271,30 +288,32 @@
           "importance": 2,
           "id": "c02cb42c8aa4",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "“我们从地狱回来了” ，在俄罗斯占领的前线城市多年后，乌克兰人说"
         },
         {
           "title": "Ukrainian evacuees reunite with family after years trapped in Russia-occupied city",
           "url": "https://www.bbc.co.uk/news/articles/cqx2818elrnzo?at_medium=RSS&at_campaign=rss",
           "publishedAt": "2026-10-31T17:53:35.000Z",
           "source": "未知来源",
-          "score": 32,
+          "score": 31,
           "summary": "Oleshky residents had been without food, water and electricity, with many resorting to cooking garden weeds to survive.",
           "excerpt": "",
           "tags": [],
           "impact": "国际事件先影响风险偏好与避险资产，再传导至供应链与大宗商品。",
           "alsoCount": 1,
-          "importance": 2,
+          "importance": 1,
           "id": "763a99da6625",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "乌克兰撤离人员在俄罗斯占领的城市被困多年后与家人团聚"
         },
         {
           "title": "More than 5,000 die from Ebola in DR Congo's deadliest outbreak",
           "url": "https://www.bbc.co.uk/news/articles/cj5ynryyep2yo?at_medium=RSS&at_campaign=rss",
           "publishedAt": "2026-10-31T15:16:20.000Z",
           "source": "未知来源",
-          "score": 31,
+          "score": 30,
           "summary": "Government data shows that more than 10,000 people have contracted the rare virus.",
           "excerpt": "",
           "tags": [],
@@ -303,14 +322,15 @@
           "importance": 1,
           "id": "3d21f51d375f",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "在刚果民主共和国最致命的埃博拉疫情中， 5000多人死于埃博拉病毒"
         },
         {
           "title": "Ethiopian PM puts ministers through military training",
           "url": "https://www.bbc.co.uk/news/articles/cmwyv2y7g9l8o?at_medium=RSS&at_campaign=rss",
           "publishedAt": "2026-10-31T14:28:15.000Z",
           "source": "未知来源",
-          "score": 31,
+          "score": 30,
           "summary": "The prime minister has previously emphasised military preparedness as central to his government's ambitions.",
           "excerpt": "",
           "tags": [],
@@ -319,39 +339,25 @@
           "importance": 1,
           "id": "93f7b4ba334e",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "埃塞俄比亚总理让部长们接受军事训练"
         },
         {
-          "title": "Polish president holds crisis talks in court standoff",
-          "url": "https://www.aljazeera.com/news/2026/11/1/polish-president-holds-crisis-talks-in-court-standoff?traffic_source=rss",
-          "publishedAt": "2026-11-01T00:30:59.000Z",
+          "title": "Binance says 90% of losses from $6.3bn hack covered as FBI says North Korea behind attack",
+          "url": "https://www.theguardian.com/business/2026/nov/01/binance-losses-covered-hack-fbi-north-korea-cryptocurrency",
+          "publishedAt": "2026-11-01T02:41:34.000Z",
           "source": "未知来源",
           "score": 28,
-          "summary": "A dispute over the politicisation of Poland's constitutional court is deepening, with no side appearing to back down.",
-          "excerpt": "",
+          "summary": "Cryptocurrency exchange says withdrawals expected to resume on Sunday as FBI blames North Korean state-sponsor…",
+          "excerpt": "Cryptocurrency exchange says withdrawals expected to resume on Sunday as FBI blames North Korean state-sponsored group TraderTraitor Cryptocurrency exchange Binance says it has replaced 90% of the ⁠amount stolen after a record $6.3bn hack of its platform by a group the FBI identified as being backed by North Korea. The remaining 10% of tokens are less liquid, meaning they ⁠may take ​longer to buy, the company said in",
           "tags": [],
           "impact": "国际事件先影响风险偏好与避险资产，再传导至供应链与大宗商品。",
           "alsoCount": 1,
           "importance": 1,
-          "id": "bc2e338970c3",
+          "id": "49fc6e1403de",
           "context": "",
-          "ai": false
-        },
-        {
-          "title": "Gen Z-led protests in Germany turn violent",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/1/germany-gen-z-protests-education-military-service?traffic_source=rss",
-          "publishedAt": "2026-11-01T00:27:20.000Z",
-          "source": "未知来源",
-          "score": 28,
-          "summary": "Protesters clashed with police as thousands took to the streets across 34 cities in Germany.",
-          "excerpt": "",
-          "tags": [],
-          "impact": "国际事件先影响风险偏好与避险资产，再传导至供应链与大宗商品。",
-          "alsoCount": 1,
-          "importance": 1,
-          "id": "1e4208dc101a",
-          "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "币安表示，由于联邦调查局称朝鲜是攻击的幕后黑手， 63亿美元的黑客攻击造成的损失中有90 ％被"
         }
       ]
     },
@@ -365,7 +371,7 @@
           "url": "https://www.cnbc.com/2026/10/31/trump-murdoch-wsj-epstein-defamation-lawsuit-dismissed.html",
           "publishedAt": "2026-10-31T23:56:40.000Z",
           "source": "未知来源",
-          "score": 35,
+          "score": 34,
           "summary": "President Donald Trump denied writing a birthday letter to sex offender Jeffrey Epstein, which was the subject…",
           "excerpt": "President Donald Trump denied writing a birthday letter to sex offender Jeffrey Epstein, which was the subject of a 2025 Wall Street Journal article.",
           "tags": [],
@@ -374,14 +380,15 @@
           "importance": 3,
           "id": "53c314e29237",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "特朗普对默多克的诽谤诉讼，《华尔街日报》关于爱泼斯坦的信被偏见驳回"
         },
         {
           "title": "Binance says 90% of $6.3 billion hack losses are now covered, plans to resume withdrawals Sunday",
           "url": "https://www.cnbc.com/2026/10/31/binance-hack-asset-coverage-withdrawals.html",
           "publishedAt": "2026-10-31T22:27:56.000Z",
           "source": "未知来源",
-          "score": 35,
+          "score": 34,
           "summary": "Binance says it has restored backing for 90% of assets affected by its $6.3 billion hack and is planning to re…",
           "excerpt": "Binance says it has restored backing for 90% of assets affected by its $6.3 billion hack and is planning to resume withdrawals, subject to security checks.",
           "tags": [],
@@ -390,7 +397,8 @@
           "importance": 3,
           "id": "68538fbfbf41",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "币安表示， 63亿美元的黑客损失中的90%现已得到弥补，并计划在周日恢复提款"
         },
         {
           "title": "SpaceX loses bid to toss NAACP lawsuit over Memphis data center air pollution",
@@ -406,14 +414,15 @@
           "importance": 2,
           "id": "71a1d39d156a",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "SpaceX因孟菲斯数据中心空气污染而败诉NAACP"
         },
         {
           "title": "OpenAI pares fundraising goal, now seeking up to $20 billion in latest round",
           "url": "https://www.cnbc.com/2026/10/31/openai-fundraising-20-billion-valuation.html",
           "publishedAt": "2026-10-31T19:56:23.000Z",
           "source": "未知来源",
-          "score": 33,
+          "score": 32,
           "summary": "The funding round is still in progress and has not closed, so the figures are subject to change, a person dire…",
           "excerpt": "The funding round is still in progress and has not closed, so the figures are subject to change, a person directly familiar with the deal told CNBC.",
           "tags": [
@@ -425,14 +434,15 @@
           "importance": 2,
           "id": "db8706bfdae2",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "OpenAI削减筹款目标，现在在最新一轮融资中寻求高达200 $"
         },
         {
           "title": "Qatari mediators held talks in Tehran aimed at restarting direct U.S.-Iran negotiations, source says",
           "url": "https://www.cnbc.com/2026/10/31/qatar-iran-us-talks-mediation.html",
           "publishedAt": "2026-10-31T13:47:03.000Z",
           "source": "未知来源",
-          "score": 30,
+          "score": 29,
           "summary": "Axios reported that Qatari mediators held more than 12 hours of talks in Tehran on Friday to reach a deal to a…",
           "excerpt": "Axios reported that Qatari mediators held more than 12 hours of talks in Tehran on Friday to reach a deal to avoid a resumption of American-led attacks on Iran.",
           "tags": [],
@@ -441,14 +451,15 @@
           "importance": 2,
           "id": "6fb459750cf8",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "消息人士称，卡塔尔调解人在德黑兰举行会谈，旨在重启美伊直接谈判"
         },
         {
           "title": "Automatic 401(k) rollovers reduce cash-outs, research finds — but few accounts reach new employer plans",
           "url": "https://www.cnbc.com/2026/10/31/401k-cash-outs-automatic-rollovers.html",
           "publishedAt": "2026-10-31T13:30:01.000Z",
           "source": "未知来源",
-          "score": 30,
+          "score": 29,
           "summary": "Workers with small 401(k) balances are cashing out less often under an automatic portability program, but most…",
           "excerpt": "Workers with small 401(k) balances are cashing out less often under an automatic portability program, but most accounts remain in temporary IRAs.",
           "tags": [],
@@ -457,14 +468,15 @@
           "importance": 2,
           "id": "1b4785c17f1b",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "研究发现，自动401 (k)展期减少了提现—但很少有账户能够达到新的雇主计划"
         },
         {
           "title": "Trump promised to slash energy costs — but gasoline, diesel and jet fuel all soared instead",
           "url": "https://www.cnbc.com/2026/10/31/trump-gas-diesel-price-midterm-election.html",
           "publishedAt": "2026-10-31T12:49:58.000Z",
           "source": "未知来源",
-          "score": 30,
+          "score": 29,
           "summary": "President Donald Trump promised voters who were angry about inflation that he would slash gasoline prices belo…",
           "excerpt": "President Donald Trump promised voters who were angry about inflation that he would slash gasoline prices below $2 a gallon in his first year in office.",
           "tags": [],
@@ -473,7 +485,8 @@
           "importance": 1,
           "id": "05c8781b6055",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "特朗普承诺削减能源成本，但汽油、柴油和喷气燃料反而飙升"
         },
         {
           "title": "‘Pop-up’ super PACs pour $637 million into 2026 midterm races",
@@ -489,7 +502,8 @@
           "importance": 1,
           "id": "769afc1b4d88",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "“弹出式”超级PAC为2026年中期比赛投入了6.37亿美元$"
         },
         {
           "title": "Automakers like Rivian and Ford are ‘democratizing 3D printing’ to reduce costs and increase speed",
@@ -505,14 +519,15 @@
           "importance": 1,
           "id": "da8844bbf2eb",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "Rivian和福特等汽车制造商正在“实现3D打印的民主化” ，以降低成本并提高速度"
         },
         {
           "title": "Anthropic's path to the Nasdaq just got a lot bumpier",
           "url": "https://www.cnbc.com/2026/10/31/anthropic-ipo-ai-spending.html",
           "publishedAt": "2026-10-31T11:00:01.000Z",
           "source": "未知来源",
-          "score": 29,
+          "score": 28,
           "summary": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first thr…",
           "excerpt": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first three-week losing streak since March.",
           "tags": [
@@ -524,7 +539,8 @@
           "importance": 1,
           "id": "4a61817e966f",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "Anthropic通往纳斯达克的道路变得更加坎坷"
         }
       ]
     },
@@ -540,11 +556,31 @@
       "desc": "AI、机器人、科技公司",
       "items": [
         {
+          "title": "Data centers are now a midterm issue, even in Brooklyn",
+          "url": "https://techcrunch.com/2026/10/31/data-centers-are-now-a-midterm-issue-even-in-brooklyn/",
+          "publishedAt": "2026-11-01T02:22:10.000Z",
+          "source": "未知来源",
+          "score": 28,
+          "summary": "At a Brooklyn midterm party five days before Election Day, every conversation, from a council member’s firesid…",
+          "excerpt": "At a Brooklyn midterm party five days before Election Day, every conversation, from a council member’s fireside chat to a debate about the Democratic Party, kept circling back to AI and data centers.",
+          "tags": [
+            "AI",
+            "算力"
+          ],
+          "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "a8e3b1a57cd2",
+          "context": "",
+          "ai": false,
+          "titleZh": "数据中心现在是一个中期问题，即使在布鲁克林"
+        },
+        {
           "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
           "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
           "publishedAt": "2026-10-31T21:41:00.000Z",
           "source": "未知来源",
-          "score": 26,
+          "score": 25,
           "summary": "Apple's new CEO defended the company's current position in the AI landscape.",
           "excerpt": "",
           "tags": [
@@ -556,30 +592,32 @@
           "importance": 3,
           "id": "89c6cb6d2971",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "苹果首席执行官表示，该公司“不想为人工智能出货”"
         },
         {
           "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
           "url": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/",
           "publishedAt": "2026-10-31T21:36:07.000Z",
           "source": "未知来源",
-          "score": 26,
+          "score": 25,
           "summary": "On November 4 at Boston’s SoWa Power Station, get ready for a full day packed with meaningful networking oppor…",
           "excerpt": "On November 4 at Boston’s SoWa Power Station, get ready for a full day packed with meaningful networking opportunities, actionable insights, and connections that could change the trajectory of your idea and startup. Register before all prices go up at the door.",
           "tags": [],
           "impact": "科技事件看落地节奏与商业化路径：短期情绪，中期看订单与资本开支。",
           "alsoCount": 1,
-          "importance": 3,
+          "importance": 2,
           "id": "cefcb0bd2478",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "还剩4天： TechCrunch创始人峰会如何帮助您建立更有用的联系以扩大规模"
         },
         {
           "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
           "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
           "publishedAt": "2026-10-31T21:17:03.000Z",
           "source": "未知来源",
-          "score": 26,
+          "score": 25,
           "summary": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.",
           "excerpt": "",
           "tags": [
@@ -591,7 +629,8 @@
           "importance": 2,
           "id": "bc398a80a0df",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "法官允许NAACP就xAI数据中心污染提起诉讼"
         },
         {
           "title": "OpenAI reportedly lowers funding target for new round",
@@ -610,14 +649,15 @@
           "importance": 2,
           "id": "344dcf79744a",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "据报道， OpenAI降低了新一轮融资目标"
         },
         {
           "title": "From restaurant guides to payments, here’s how TikTok is building a super app",
           "url": "https://techcrunch.com/2026/10/31/tiktoks-road-to-becoming-a-super-app/",
           "publishedAt": "2026-10-31T15:41:57.000Z",
           "source": "未知来源",
-          "score": 23,
+          "score": 22,
           "summary": "TikTok may be working to become the app that people use for most of their digital activities.",
           "excerpt": "",
           "tags": [],
@@ -626,15 +666,16 @@
           "importance": 2,
           "id": "5690fa4bc638",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "从餐厅指南到付款，以下是TikTok如何构建超级应用程序"
         },
         {
-          "title": "当AI读懂了妈妈的困境：智能科技母婴品牌两只兔子发布三大科技新品 重构自如育儿生活 - ELLE China",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5hcXd4YnVkUlhtcDQ3Q3B5czZMU25RQmZqOTN4VzBGYVJzNlQyS3JLMUR5akFpbWl0bFNfYXBsQVNVamo5ZTRqV1ZDYkZfT3Atbm1oTFFXSm1RY2VvZXFocHBjcnVtWERaTEdycHQtLTgwa05UTjZWRnc4ajVOZjA?oc=5",
-          "publishedAt": "2026-10-31T15:07:27.000Z",
-          "source": "ELLE China",
-          "score": 23,
-          "summary": "当AI读懂了妈妈的困境：智能科技母婴品牌两只兔子发布三大科技新品 重构自如育儿生活 &nbsp;&nbsp;ELLE China",
+          "title": "从创新链到应用链，2026人工智能+大会共探AI产业化路径 - 新京报",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9GdVBBdVZrYkVwSGtwTjJGSmJac25PVm1YeG9Ec0Ffb2IzMDcyRzFtc2xVOHg3bHpFd2VRUldTMHNDaTVHcWp0cHMxQ2h2WDUwd2ZsLXd4VFJoVHMtSkpjV2NWbWM?oc=5",
+          "publishedAt": "2026-10-31T15:36:00.000Z",
+          "source": "新京报",
+          "score": 22,
+          "summary": "从创新链到应用链，2026人工智能+大会共探AI产业化路径 &nbsp;&nbsp;新京报",
           "excerpt": "",
           "tags": [
             "AI",
@@ -642,8 +683,8 @@
           ],
           "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
           "alsoCount": 1,
-          "importance": 2,
-          "id": "de3ef8bc89a9",
+          "importance": 1,
+          "id": "f2ff921af330",
           "context": "",
           "ai": false
         },
@@ -661,14 +702,15 @@
           "importance": 1,
           "id": "7d23de49dd57",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "我带了两部iPhone去度假。二人组赢得了我的支持。"
         },
         {
           "title": "Seabirds racing home over the ocean can get jet-lagged",
           "url": "https://arstechnica.com/science/2026/10/seabirds-racing-home-over-the-ocean-can-get-jet-lagged/",
           "publishedAt": "2026-10-31T11:15:26.000Z",
           "source": "未知来源",
-          "score": 21,
+          "score": 20,
           "summary": "A long flight home from feeding grounds messes with birds' internal clocks.",
           "excerpt": "",
           "tags": [],
@@ -677,14 +719,15 @@
           "importance": 1,
           "id": "e58df0c82cd4",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "海鸟在海上赛车回家可能会时差"
         },
         {
           "title": "The FDA wants to pull its approval of a drug. It’s not so easy.",
           "url": "https://arstechnica.com/science/2026/10/the-fda-wants-to-pull-its-approval-of-a-drug-its-not-so-easy/",
           "publishedAt": "2026-10-31T11:02:34.000Z",
           "source": "未知来源",
-          "score": 21,
+          "score": 20,
           "summary": "The regulator says Tavneos was approved on the basis of manipulated study data. Should patients still have access to it?",
           "excerpt": "",
           "tags": [],
@@ -693,25 +736,8 @@
           "importance": 1,
           "id": "58f1874bf514",
           "context": "",
-          "ai": false
-        },
-        {
-          "title": "国产芯片不够好用？郑纬民院士直指关键瓶颈 - 新浪财经",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA4WHJqZ05SVEE1bkNvV1dUOExWLTdFdWlhUGlSZWVLenJFSU1oUlZKc1JEWFgzN2FJQVdEV25QeEotay0xR0k1V2xpTTNoRDdoeHhkT3hRNHgzanU3NXFmQXF3YmxPSTN4b2NENi1lU29DUmszV1FsSg?oc=5",
-          "publishedAt": "2026-10-31T10:50:21.000Z",
-          "source": "新浪财经",
-          "score": 21,
-          "summary": "国产芯片不够好用？郑纬民院士直指关键瓶颈 &nbsp;&nbsp;新浪财经",
-          "excerpt": "",
-          "tags": [
-            "半导体"
-          ],
-          "impact": "半导体看稼动率与资本开支周期。先进制程与成熟制程已经分化，不要用同一个逻辑定价；设备与材料的订单滞后于资本开支一到两个季度。",
-          "alsoCount": 1,
-          "importance": 1,
-          "id": "39d67cea95d6",
-          "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "FDA希望撤销对一种药物的批准。这并不容易。"
         }
       ]
     },
@@ -721,27 +747,100 @@
       "desc": "能源、制造业、半导体、资源",
       "items": [
         {
+          "title": "Edge AI Daily 早报（11月1日）",
+          "url": "https://www.tmtpost.com/8188908.html",
+          "publishedAt": "2026-11-01T01:23:03.000Z",
+          "source": "未知来源",
+          "score": 31,
+          "summary": "AI叙事进入资本配置的周期性重估：纳斯达克录得2025年3月以来最差单月，Meta、Alphabet、Amazon财报利好却遭抛售，四巨头AI资本开支把自由现金流砸回负值，高盛预计2026年合计达7250亿美元；",
+          "excerpt": "AI叙事进入资本配置的周期性重估：纳斯达克录得2025年3月以来最差单月，Meta、Alphabet、Amazon财报利好却遭抛售，四巨头AI资本开支把自由现金流砸回负值，高盛预计2026年合计达7250亿美元；标普将Meta信用展望下调至负面，为其首次因AI基建支出获负面展望。一级市场同步降温，OpenAI融资目标从300亿美元砍至约200亿美元、估值降至1.25万亿美元，年化营收信号由700亿美元修正至500亿美元，2030年算力支出从1.4万亿美元削至约6000亿美元。Anthropic提交IPO招股文件，披露近9000亿美元未来算力义务，远超1175亿美元负债与1120亿美元现金；英伟达拟为Nscale西弗吉尼亚Anthropic数据中心提供数十亿美元剩余价值担保，AI基建信用链条收紧。",
+          "tags": [
+            "AI",
+            "算力"
+          ],
+          "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "c6e59c97d1d2",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "12 万招 985 硕士，3000 万给一个专科生：张雪到底在按什么开价？",
+          "url": "https://www.tmtpost.com/8188665.html",
+          "publishedAt": "2026-11-01T02:20:08.000Z",
+          "source": "未知来源",
+          "score": 28,
+          "summary": "三个价，一次校招。",
+          "excerpt": "",
+          "tags": [],
+          "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "c3beff94eecb",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "L4需要更大的模型，芯片得换个造法了",
+          "url": "https://www.tmtpost.com/8188662.html",
+          "publishedAt": "2026-11-01T02:13:22.000Z",
+          "source": "未知来源",
+          "score": 28,
+          "summary": "",
+          "excerpt": "",
+          "tags": [
+            "半导体"
+          ],
+          "impact": "半导体看稼动率与资本开支周期。先进制程与成熟制程已经分化，不要用同一个逻辑定价；设备与材料的订单滞后于资本开支一到两个季度。",
+          "alsoCount": 1,
+          "importance": 2,
+          "id": "56c714ab4026",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "跟AI谈恋爱，年轻人图什么？",
+          "url": "https://www.tmtpost.com/8188660.html",
+          "publishedAt": "2026-11-01T02:00:29.000Z",
+          "source": "未知来源",
+          "score": 28,
+          "summary": "AI是假的，治愈是真的。",
+          "excerpt": "",
+          "tags": [
+            "AI",
+            "算力"
+          ],
+          "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
+          "alsoCount": 1,
+          "importance": 2,
+          "id": "e6c82a26b22e",
+          "context": "",
+          "ai": false
+        },
+        {
           "title": "Chevron Raises Exploration Spending By 50%",
           "url": "https://oilprice.com/Energy/Crude-Oil/Chevron-Raises-Exploration-Spending-By-50.html",
           "publishedAt": "2026-10-31T23:00:00.000Z",
           "source": "未知来源",
-          "score": 27,
+          "score": 26,
           "summary": "After years of focusing on growing exploration and production in the U.S. Gulf of Mexico and the Permian shale…",
           "excerpt": "After years of focusing on growing exploration and production in the U.S. Gulf of Mexico and the Permian shale basin, U.S. oil and gas supermajor Chevron returns to high-impact frontier exploration as it seeks to renew its portfolio with diverse opportunities globally. Exploration in South America, Africa, and the Eastern Mediterranean is now a key focus of Chevron’s upstream business, which the company looks to turn",
           "tags": [],
           "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
           "alsoCount": 1,
-          "importance": 3,
+          "importance": 2,
           "id": "86cd61505f79",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "雪佛龙将勘探支出提高50%"
         },
         {
           "title": "透视A股三季报：AI算力领跑，材料量价齐升，地产和消费寻底｜看财报",
           "url": "https://www.tmtpost.com/8188863.html",
           "publishedAt": "2026-10-31T13:15:46.000Z",
           "source": "未知来源",
-          "score": 26,
+          "score": 25,
           "summary": "新旧动能加速切换。",
           "excerpt": "",
           "tags": [
@@ -752,7 +851,7 @@
           ],
           "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
           "alsoCount": 1,
-          "importance": 3,
+          "importance": 2,
           "id": "e45bc277cc1c",
           "context": "",
           "ai": false
@@ -762,14 +861,31 @@
           "url": "https://oilprice.com/Geopolitics/International/US-Intelligence-China-Could-Put-Laser-Weapons-in-Space-by-2030.html",
           "publishedAt": "2026-10-31T21:00:00.000Z",
           "source": "未知来源",
-          "score": 26,
+          "score": 25,
           "summary": "A new United States intelligence report warns that China is developing energy weapons and spaceplanes that it …",
           "excerpt": "A new United States intelligence report warns that China is developing energy weapons and spaceplanes that it could use for military operations in outer space, with the capability of using directed-energy weapons in orbit by the end of the 2020s. The US Defence Intelligence Agency (DIA) report, published on Sunday, includes a rare image of the newly developed reusable spaceplane. The DIA report, entitled Challenges t",
           "tags": [],
           "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
           "alsoCount": 1,
-          "importance": 2,
+          "importance": 1,
           "id": "6ccfb5b1f535",
+          "context": "",
+          "ai": false,
+          "titleZh": "美国情报部门：中国可能在2030年前将激光武器送入太空"
+        },
+        {
+          "title": "联合健康今年涨幅已达24%，为何股价仍有望继续上涨",
+          "url": "https://www.tmtpost.com/8188840.html",
+          "publishedAt": "2026-10-31T12:29:14.000Z",
+          "source": "未知来源",
+          "score": 25,
+          "summary": "这家健康保险公司的第三季度业绩进一步巩固了该股的上涨势头。",
+          "excerpt": "",
+          "tags": [],
+          "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
+          "alsoCount": 1,
+          "importance": 1,
+          "id": "5691a77bcda0",
           "context": "",
           "ai": false
         },
@@ -778,23 +894,24 @@
           "url": "https://oilprice.com/Energy/Energy-General/Jackdaw-Approval-Sparks-Fierce-Debate-Over-Britains-Energy-Future.html",
           "publishedAt": "2026-10-31T19:00:00.000Z",
           "source": "未知来源",
-          "score": 25,
+          "score": 24,
           "summary": "The United Kingdom approved the development of the Jackdaw North Sea gas field on the 21st of October followin…",
           "excerpt": "The United Kingdom approved the development of the Jackdaw North Sea gas field on the 21st of October following years of legal battles and political uncertainty. Jackdaw is a large offshore natural gas field in the North Sea, owned by Adura, a joint venture between Shell and Equinor, since 2025, located around 240 km east of Aberdeen in Scotland. The field was approved by the U.K. government in 2022, but the developm",
           "tags": [],
           "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
           "alsoCount": 1,
-          "importance": 2,
+          "importance": 1,
           "id": "43bf5494a953",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "杰克道获得批准引发关于英国能源未来的激烈争论"
         },
         {
           "title": "DARPA Backs Project to Measure AI Energy Use at Every Stage of the Workflow",
           "url": "https://oilprice.com/Energy/Energy-General/DARPA-Backs-Project-to-Measure-AI-Energy-Use-at-Every-Stage-of-the-Workflow.html",
           "publishedAt": "2026-10-31T17:00:00.000Z",
           "source": "未知来源",
-          "score": 24,
+          "score": 23,
           "summary": "The artificial intelligence boom is creating an energy monster. The indiscriminate integration of machine lear…",
           "excerpt": "The artificial intelligence boom is creating an energy monster. The indiscriminate integration of machine learning into everything from from our energy grids to our electric toothbrushes – no, really – has created a global race to build up data center capacity as quickly as humanly possible, causing energy demand projections to skyrocket and placing unprecedented strain on the world’s energy grids. By 2030, data cent",
           "tags": [
@@ -803,95 +920,11 @@
           ],
           "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
           "alsoCount": 1,
-          "importance": 2,
+          "importance": 1,
           "id": "854e2ede3f81",
           "context": "",
-          "ai": false
-        },
-        {
-          "title": "Senegal’s Ambitious Plan to Slash Electricity Costs and Boost Energy Security",
-          "url": "https://oilprice.com/Energy/Energy-General/Senegals-Ambitious-Plan-to-Slash-Electricity-Costs-and-Boost-Energy-Security.html",
-          "publishedAt": "2026-10-31T15:00:00.000Z",
-          "source": "未知来源",
-          "score": 23,
-          "summary": "The government of Senegal has ambitious energy diversification aims, with plans to develop both the country’s …",
-          "excerpt": "The government of Senegal has ambitious energy diversification aims, with plans to develop both the country’s oil and gas sector and grow its renewable energy capacity. As part of its Vision 2050 plan, the government aims to reduce energy costs and enhance energy security by diversifying energy sources. The government has announced several renewable projects in recent years and has recently made blocks available for ",
-          "tags": [],
-          "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
-          "alsoCount": 1,
-          "importance": 2,
-          "id": "88ecc9b77dba",
-          "context": "",
-          "ai": false
-        },
-        {
-          "title": "易鸿智能冲刺港股IPO：宁德时代撑起七成收入，存货却超全年营收",
-          "url": "https://www.tmtpost.com/8188178.html",
-          "publishedAt": "2026-10-31T12:22:32.000Z",
-          "source": "未知来源",
-          "score": 21,
-          "summary": "对大客户议价能力弱，致业务毛利率下滑。",
-          "excerpt": "",
-          "tags": [
-            "利率",
-            "流动性",
-            "就业",
-            "消费"
-          ],
-          "impact": "利率是估值之锚：降息预期升温利多成长股与黄金、利空美元；但若因衰退而降息，风险资产未必受益。看 2 年期美债与政策指引，而不是单次操作。",
-          "alsoCount": 1,
-          "importance": 1,
-          "id": "1c18898b2514",
-          "context": "",
-          "ai": false
-        },
-        {
-          "title": "蔚来的“三个聚焦”：为规模幻觉买单之后",
-          "url": "https://www.tmtpost.com/8187393.html",
-          "publishedAt": "2026-10-31T12:21:21.000Z",
-          "source": "未知来源",
-          "score": 21,
-          "summary": "蔚来战略退守聚焦高端，收缩求存待破局。",
-          "excerpt": "",
-          "tags": [],
-          "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
-          "alsoCount": 1,
-          "importance": 1,
-          "id": "133d55d5d88c",
-          "context": "",
-          "ai": false
-        },
-        {
-          "title": "相比二代掌权的通化东宝，甘李药业更像一家创新药企",
-          "url": "https://www.tmtpost.com/8187864.html",
-          "publishedAt": "2026-10-31T12:18:23.000Z",
-          "source": "未知来源",
-          "score": 21,
-          "summary": "两种交棒方式。",
-          "excerpt": "",
-          "tags": [],
-          "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
-          "alsoCount": 1,
-          "importance": 1,
-          "id": "e8de9c9f5919",
-          "context": "",
-          "ai": false
-        },
-        {
-          "title": "欧洲市场中的“国产车”，正在复制日本车的美国故事？",
-          "url": "https://www.tmtpost.com/8188005.html",
-          "publishedAt": "2026-10-31T12:18:18.000Z",
-          "source": "未知来源",
-          "score": 21,
-          "summary": "渗透是时间问题。",
-          "excerpt": "",
-          "tags": [],
-          "impact": "产业事件看供需与库存位置，价格传导通常有一到两个季度滞后。",
-          "alsoCount": 1,
-          "importance": 1,
-          "id": "33580dffe26f",
-          "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "DARPA支持项目测量工作流程各个阶段的人工智能能源使用情况"
         }
       ]
     },
@@ -901,12 +934,28 @@
       "desc": "中国政策、全球经济政策",
       "items": [
         {
-          "title": "政策动态 | 关于加强消费基础设施建设 促进消费投资良性互动的指导意见(发改就业〔2026〕1508号) - 搜狐网",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjNoTldvREtSNkF2Y2p6ZHl4anFQMXlsV2NORTNqU2Y4OHoxZkJ3Y19hR01lVzJpM0YzaFkyLUFEWVdUNEJmVlBRN2xfUmhqUW9STmJYbWtpaksySVppNUoxb2xvZmZZS0dCai0xQlRMSHUwcW9JbDNGNndWSG5weDk0SFNvUWFp?oc=5",
-          "publishedAt": "2026-10-31T02:25:31.000Z",
-          "source": "搜狐网",
-          "score": 17,
-          "summary": "政策动态 | 关于加强消费基础设施建设 促进消费投资良性互动的指导意见(发改就业〔2026〕1508号) &nbsp;&nbsp;",
+          "title": "“原拆原建”破局 “自主更新”圆梦 - 新浪财经",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1Id1lyVGNVTmZ0cmRXZ2hKS09hWW1sUDhiM1NmWUl1eFdGMVUzSzZBMmplQVVBQVFNckd3VFE4ZlVGRkVPRmJfSWgwMHh4R1Y1MXZaRmhOMU9HbDFTN3JEYWpOQm15T1ZDNWpSU0tMN2VVb0p6REs5TA?oc=5",
+          "publishedAt": "2026-10-31T22:25:28.000Z",
+          "source": "新浪财经",
+          "score": 26,
+          "summary": "“原拆原建”破局 “自主更新”圆梦 &nbsp;&nbsp;新浪财经",
+          "excerpt": "",
+          "tags": [],
+          "impact": "政策看力度、节奏与执行，市场通常先交易预期、再修正。",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "f44efe4e4cca",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "消费基建迎来政策组合拳 五部门发文促消费投资良性互动 - 证券之星",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9UY2hZTjBCWWpFVnZhUVdvTTB6anV0RVF1SXNqQm5ac1RyeTkwQVUzVFZ5SXdUZGlJTVhxNkhCUlpPZ3BMUzFCSlNSMTZrUG5PU2dfaW5Qakx1YWd1WGtpUA?oc=5",
+          "publishedAt": "2026-10-30T23:51:56.000Z",
+          "source": "证券之星",
+          "score": 16,
+          "summary": "消费基建迎来政策组合拳 五部门发文促消费投资良性互动 &nbsp;&nbsp;证券之星",
           "excerpt": "",
           "tags": [
             "就业",
@@ -915,6 +964,25 @@
           "impact": "就业与收入预期是消费复苏的前提。政策落地到消费数据通常有两到三个季度的滞后，先看招聘与工时，再看零售。",
           "alsoCount": 1,
           "importance": 3,
+          "id": "3ef6130eed77",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "政策动态 | 关于加强消费基础设施建设 促进消费投资良性互动的指导意见(发改就业〔2026〕1508号) - 搜狐网",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjNoTldvREtSNkF2Y2p6ZHl4anFQMXlsV2NORTNqU2Y4OHoxZkJ3Y19hR01lVzJpM0YzaFkyLUFEWVdUNEJmVlBRN2xfUmhqUW9STmJYbWtpaksySVppNUoxb2xvZmZZS0dCai0xQlRMSHUwcW9JbDNGNndWSG5weDk0SFNvUWFp?oc=5",
+          "publishedAt": "2026-10-31T02:25:31.000Z",
+          "source": "搜狐网",
+          "score": 16,
+          "summary": "政策动态 | 关于加强消费基础设施建设 促进消费投资良性互动的指导意见(发改就业〔2026〕1508号) &nbsp;&nbsp;",
+          "excerpt": "",
+          "tags": [
+            "就业",
+            "消费"
+          ],
+          "impact": "就业与收入预期是消费复苏的前提。政策落地到消费数据通常有两到三个季度的滞后，先看招聘与工时，再看零售。",
+          "alsoCount": 1,
+          "importance": 2,
           "id": "dd0f426ff180",
           "context": "",
           "ai": false
@@ -933,7 +1001,7 @@
           "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5zLXFIcEhDeHNxNEpOWWVfU0FjZEo2SGtpZE9mdmU3bnlmQ0pSb0oybEFqdmZrdkNQMFl5UHA3aWMxd21UUUN3QWgxMUNNZUpxS2prTlFkV1c5c0NxODM1S3Bn?oc=5",
           "publishedAt": "2026-10-31T06:26:00.000Z",
           "source": "华盛通",
-          "score": 19,
+          "score": 18,
           "summary": "金价失守4000美元，黄金的后市走势研判 港美股资讯 &nbsp;&nbsp;华盛通",
           "excerpt": "",
           "tags": [
@@ -961,26 +1029,8 @@
           "importance": 3,
           "id": "e487e3fe2259",
           "context": "",
-          "ai": false
-        },
-        {
-          "title": "Radical AI uses autonomous labs to accelerate alloy discovery",
-          "url": "https://www.mining.com/radical-ai-uses-autonomous-labs-to-accelerate-alloy-discovery/",
-          "publishedAt": "2026-10-30T20:44:27.000Z",
-          "source": "未知来源",
-          "score": 16,
-          "summary": "New York-based company says its AI-powered platform is developing advanced alloys in months rather than years.",
-          "excerpt": "",
-          "tags": [
-            "AI",
-            "算力"
-          ],
-          "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
-          "alsoCount": 1,
-          "importance": 2,
-          "id": "c40c2578150a",
-          "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "尽管分析师认为铀供应收紧，但铀股仍下跌"
         },
         {
           "title": "国际金价失守3900美元/盎司，后市走向如何？ - 搜狐网",
@@ -998,27 +1048,6 @@
           "alsoCount": 1,
           "importance": 2,
           "id": "6555029a844a",
-          "context": "",
-          "ai": false
-        },
-        {
-          "title": "Gold Falls To One-Year Low As AI Spending Worries Hit Tech Stocks - Forbes Middle East",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRExyR2pRdGUtTVNSUEppZ0JnSWwyN0FCU1lVaVhrYlpDVGtiSS1ocF9oRHlwelV1SWlUSE1DYk1NcWgydm1uYjF6dVFYR3RDdHZnMDBJTEdkNjhwZm8wQnhXRHZSZlV2TFdEd1J6Y0ZMVElLR2JfTS1sUHRiTktVUW1BZmQ4Ulg4SV8wdDJJNTYxaDJCcWt1X0V4bVpKSktyQkN3X3pzYm1fbWNpQXJ2YlFRVTJhS2VmQVE?oc=5",
-          "publishedAt": "2026-10-30T20:53:42.000Z",
-          "source": "Forbes Middle East",
-          "score": 16,
-          "summary": "Gold Falls To One-Year Low As AI Spending Worries Hit Tech Stocks &nbsp;",
-          "excerpt": "Gold Falls To One-Year Low As AI Spending Worries Hit Tech Stocks &nbsp;&nbsp; Forbes Middle East",
-          "tags": [
-            "黄金",
-            "避险",
-            "AI",
-            "算力"
-          ],
-          "impact": "金价的三条主线：美元与实际利率（反向）、央行购金（结构性买盘）、ETF 与投机持仓（情绪）。短线看美元指数和 10 年期实际收益率，中线看央行净购金能否延续。",
-          "alsoCount": 1,
-          "importance": 2,
-          "id": "5d71ce993943",
           "context": "",
           "ai": false
         }
@@ -1043,7 +1072,8 @@
           "importance": 3,
           "id": "8fa2de342312",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "印度反对派将举行大型集会，要求选举主席辞职"
         }
       ]
     },
@@ -1053,32 +1083,11 @@
       "desc": "DRAM、NAND、HBM、存储芯片价格、长鑫科技等",
       "items": [
         {
-          "title": "预测失效的那刻，存储行业撞见物理AI的边界",
-          "url": "https://www.tmtpost.com/8188551.html",
-          "publishedAt": "2026-10-31T11:57:24.000Z",
-          "source": "未知来源",
-          "score": 29,
-          "summary": "先锚定具身智能想要抵达的终局，再反向推导底层基础设施需要具备怎样的能力上限。",
-          "excerpt": "",
-          "tags": [
-            "存储",
-            "半导体",
-            "AI",
-            "算力"
-          ],
-          "impact": "存储是典型的价格周期品：涨价通常来自供给收缩（减产、转产 HBM）叠加 AI 服务器需求。关注合约价、原厂资本开支、模组厂库存天数三个指标。",
-          "alsoCount": 1,
-          "importance": 3,
-          "id": "af6e04c6450d",
-          "context": "",
-          "ai": false
-        },
-        {
           "title": "你的8G iPad里有12G内存！库克走了但他的刀法追着我砍",
           "url": "https://www.qbitai.com/2026/10/506884.html",
           "publishedAt": "2026-10-31T05:17:50.000Z",
           "source": "未知来源",
-          "score": 26,
+          "score": 25,
           "summary": "苹果“牛奶倒河里”式操作翻红",
           "excerpt": "",
           "tags": [
@@ -1100,32 +1109,11 @@
       "desc": "大模型、AI 芯片、算力、AI 应用、行业竞争",
       "items": [
         {
-          "title": "中瑞自贸协定升级 瑞士商会人士看好合作新机遇",
-          "url": "https://www.chinanews.com.cn/cj/2026/11-01/10724153.shtml",
-          "publishedAt": "2026-11-01T01:14:21.000Z",
-          "source": "未知来源",
-          "score": 46,
-          "summary": "中新网海口11月1日电 (记者 王子谦)“对于瑞士而言，最有价值的不仅是降低关税，更重要的在于拓展服务贸易和准入、生产性服务的相互认可及合格评定、人工智能和可持续发展等，这是向前迈进的重要一步。",
-          "excerpt": "中新网海口11月1日电 (记者 王子谦)“对于瑞士而言，最有价值的不仅是降低关税，更重要的在于拓展服务贸易和准入、生产性服务的相互认可及合格评定、人工智能和可持续发展等，这是向前迈进的重要一步。”中国瑞士商会名誉主席、瑞士华南商会会长马丁·穆勒10月31日在海口说。",
-          "tags": [
-            "AI",
-            "算力",
-            "贸易",
-            "供给"
-          ],
-          "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
-          "alsoCount": 1,
-          "importance": 3,
-          "id": "d06a70ab2bd3",
-          "context": "",
-          "ai": false
-        },
-        {
           "title": "OpenAI pares fundraising goal, now seeking up to $20 billion in latest round",
           "url": "https://www.cnbc.com/2026/10/31/openai-fundraising-20-billion-valuation.html",
           "publishedAt": "2026-10-31T19:56:23.000Z",
           "source": "未知来源",
-          "score": 41,
+          "score": 40,
           "summary": "The funding round is still in progress and has not closed, so the figures are subject to change, a person dire…",
           "excerpt": "The funding round is still in progress and has not closed, so the figures are subject to change, a person directly familiar with the deal told CNBC.",
           "tags": [
@@ -1137,6 +1125,26 @@
           "importance": 3,
           "id": "db8706bfdae2",
           "context": "",
+          "ai": false,
+          "titleZh": "OpenAI削减筹款目标，现在在最新一轮融资中寻求高达200 $"
+        },
+        {
+          "title": "Edge AI Daily 早报（11月1日）",
+          "url": "https://www.tmtpost.com/8188908.html",
+          "publishedAt": "2026-11-01T01:23:03.000Z",
+          "source": "未知来源",
+          "score": 39,
+          "summary": "AI叙事进入资本配置的周期性重估：纳斯达克录得2025年3月以来最差单月，Meta、Alphabet、Amazon财报利好却遭抛售，四巨头AI资本开支把自由现金流砸回负值，高盛预计2026年合计达7250亿美元；",
+          "excerpt": "AI叙事进入资本配置的周期性重估：纳斯达克录得2025年3月以来最差单月，Meta、Alphabet、Amazon财报利好却遭抛售，四巨头AI资本开支把自由现金流砸回负值，高盛预计2026年合计达7250亿美元；标普将Meta信用展望下调至负面，为其首次因AI基建支出获负面展望。一级市场同步降温，OpenAI融资目标从300亿美元砍至约200亿美元、估值降至1.25万亿美元，年化营收信号由700亿美元修正至500亿美元，2030年算力支出从1.4万亿美元削至约6000亿美元。Anthropic提交IPO招股文件，披露近9000亿美元未来算力义务，远超1175亿美元负债与1120亿美元现金；英伟达拟为Nscale西弗吉尼亚Anthropic数据中心提供数十亿美元剩余价值担保，AI基建信用链条收紧。",
+          "tags": [
+            "AI",
+            "算力"
+          ],
+          "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "c6e59c97d1d2",
+          "context": "",
           "ai": false
         },
         {
@@ -1144,7 +1152,7 @@
           "url": "https://www.cnbc.com/2026/10/31/anthropic-ipo-ai-spending.html",
           "publishedAt": "2026-10-31T11:00:01.000Z",
           "source": "未知来源",
-          "score": 37,
+          "score": 36,
           "summary": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first thr…",
           "excerpt": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first three-week losing streak since March.",
           "tags": [
@@ -1156,16 +1164,17 @@
           "importance": 2,
           "id": "4a61817e966f",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "Anthropic通往纳斯达克的道路变得更加坎坷"
         },
         {
-          "title": "医生和AI说的不一样，该听谁的？",
-          "url": "https://www.chinanews.com.cn/ll/2026/11-01/10724160.shtml",
-          "publishedAt": "2026-11-01T01:12:01.000Z",
+          "title": "Data centers are now a midterm issue, even in Brooklyn",
+          "url": "https://techcrunch.com/2026/10/31/data-centers-are-now-a-midterm-issue-even-in-brooklyn/",
+          "publishedAt": "2026-11-01T02:22:10.000Z",
           "source": "未知来源",
           "score": 36,
-          "summary": "“大夫，您说的咋和AI不一样啊？”“医生，AI说我这个病还能这么治，您看看对不对？”随着人工智能技术的普及，越来越多患者带着AI的“诊断”走进诊室。",
-          "excerpt": "“大夫，您说的咋和AI不一样啊？”“医生，AI说我这个病还能这么治，您看看对不对？”随着人工智能技术的普及，越来越多患者带着AI的“诊断”走进诊室。患者愿意带着问题来，本身不是坏事。多问一句、多搜几次，说明健康素养在提升；信息多一个来源，心里也少一分忐忑。但听归听，最后信谁的，得想清楚。",
+          "summary": "At a Brooklyn midterm party five days before Election Day, every conversation, from a council member’s firesid…",
+          "excerpt": "At a Brooklyn midterm party five days before Election Day, every conversation, from a council member’s fireside chat to a debate about the Democratic Party, kept circling back to AI and data centers.",
           "tags": [
             "AI",
             "算力"
@@ -1173,17 +1182,18 @@
           "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
           "alsoCount": 1,
           "importance": 2,
-          "id": "b5211888eeb6",
+          "id": "a8e3b1a57cd2",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "数据中心现在是一个中期问题，即使在布鲁克林"
         },
         {
-          "title": "当AI唱起“过来人”，谁才是情绪的主人？",
-          "url": "https://www.chinanews.com.cn/ll/2026/11-01/10724151.shtml",
-          "publishedAt": "2026-11-01T01:04:53.000Z",
+          "title": "跟AI谈恋爱，年轻人图什么？",
+          "url": "https://www.tmtpost.com/8188660.html",
+          "publishedAt": "2026-11-01T02:00:29.000Z",
           "source": "未知来源",
           "score": 36,
-          "summary": "【艺评】当AI唱起“过来人”，谁才是情绪的主人？",
+          "summary": "AI是假的，治愈是真的。",
           "excerpt": "",
           "tags": [
             "AI",
@@ -1192,18 +1202,18 @@
           "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
           "alsoCount": 1,
           "importance": 2,
-          "id": "147e400fc9a2",
+          "id": "e6c82a26b22e",
           "context": "",
           "ai": false
         },
         {
-          "title": "OpenAI宣布ChatGPT部分功能将与Codex共享额度",
-          "url": "https://www.jiemian.com/article/15278453.html",
-          "publishedAt": "2026-11-01T01:00:55.000Z",
+          "title": "AI视频生成没有“终局”",
+          "url": "https://www.jiemian.com/article/15278250.html",
+          "publishedAt": "2026-11-01T01:24:13.000Z",
           "source": "未知来源",
-          "score": 36,
-          "summary": "10月31日，OpenAI公告称，自12月起，ChatGPT Plus、Pro、Business套餐的使用额度将在ChatGPT与Codex之间共享。",
-          "excerpt": "10月31日，OpenAI公告称，自12月起，ChatGPT Plus、Pro、Business套餐的使用额度将在ChatGPT与Codex之间共享。OpenAI正在把Work的智能体能力整合至ChatGPT主交互界面。用量以Token统计，消耗额度取决于模型与任务复杂度，复杂任务消耗更高；即时对话（Instant chat）不占用该共享额度。OpenAI预计，大多数用户等待额度重置的频率不会比现在更高。",
+          "score": 35,
+          "summary": "深度嵌入创作者的完整工作流。",
+          "excerpt": "",
           "tags": [
             "AI",
             "算力"
@@ -1211,7 +1221,7 @@
           "impact": "AI 链条看三层：算力（GPU/HBM/先进封装）→ 模型（训练成本、推理价格战）→ 应用（付费率）。资本开支指引比单季业绩更能决定估值。",
           "alsoCount": 1,
           "importance": 2,
-          "id": "6e54afb1609c",
+          "id": "482e2ca0c329",
           "context": "",
           "ai": false
         },
@@ -1220,7 +1230,7 @@
           "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
           "publishedAt": "2026-10-31T21:41:00.000Z",
           "source": "未知来源",
-          "score": 34,
+          "score": 33,
           "summary": "Apple's new CEO defended the company's current position in the AI landscape.",
           "excerpt": "",
           "tags": [
@@ -1232,14 +1242,15 @@
           "importance": 1,
           "id": "89c6cb6d2971",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "苹果首席执行官表示，该公司“不想为人工智能出货”"
         },
         {
           "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
           "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
           "publishedAt": "2026-10-31T21:17:03.000Z",
           "source": "未知来源",
-          "score": 34,
+          "score": 33,
           "summary": "An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.",
           "excerpt": "",
           "tags": [
@@ -1251,14 +1262,15 @@
           "importance": 1,
           "id": "bc398a80a0df",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "法官允许NAACP就xAI数据中心污染提起诉讼"
         },
         {
           "title": "透视A股三季报：AI算力领跑，材料量价齐升，地产和消费寻底｜看财报",
           "url": "https://www.tmtpost.com/8188863.html",
           "publishedAt": "2026-10-31T13:15:46.000Z",
           "source": "未知来源",
-          "score": 34,
+          "score": 33,
           "summary": "新旧动能加速切换。",
           "excerpt": "",
           "tags": [
@@ -1279,7 +1291,7 @@
           "url": "https://www.marketwatch.com/story/medicare-used-ai-to-pre-approve-patient-care-and-it-immediately-led-to-a-large-drop-in-medical-services-dc38a210?mod=mw_rss_topstories",
           "publishedAt": "2026-10-31T17:26:00.000Z",
           "source": "未知来源",
-          "score": 32,
+          "score": 31,
           "summary": "Medicare is testing the use of AI to conduct prior authorizations to target wasteful medical spending",
           "excerpt": "",
           "tags": [
@@ -1291,7 +1303,8 @@
           "importance": 1,
           "id": "83e08bd25784",
           "context": "",
-          "ai": false
+          "ai": false,
+          "titleZh": "Medicare使用人工智能来预先批准患者护理，并立即导致医疗服务大幅下降"
         }
       ]
     },
@@ -1301,21 +1314,18 @@
       "desc": "两岸关系、台海局势、台湾政策及经济动态",
       "items": [
         {
-          "title": "中央气象台发布大风蓝色预警，多地阵风可达8级",
-          "url": "https://www.jiemian.com/article/15278414.html",
-          "publishedAt": "2026-10-31T23:42:47.000Z",
-          "source": "未知来源",
-          "score": 35,
-          "summary": "中央气象台11月1日06时继续发布大风蓝色预警：预计，11月1日08时至2日08时，内蒙古中西部、山西北部、河北北部、北京西部、辽宁西部、西藏北部、青海南部等地部分地区有5～7级风，阵风8～9级；",
-          "excerpt": "中央气象台11月1日06时继续发布大风蓝色预警：预计，11月1日08时至2日08时，内蒙古中西部、山西北部、河北北部、北京西部、辽宁西部、西藏北部、青海南部等地部分地区有5～7级风，阵风8～9级；渤海北部海域、渤海海峡、黄海大部海域、东海北部海域将有7~8级、阵风9~10级的大风。预计，11月2日08时至3日08时，内蒙古东部、河北北部、西藏中西部、青海南部等地有5～7级风，阵风8级；东海东北部和西南部海域、台湾海峡将有7级、阵风8~9级的大风。",
-          "tags": [
-            "台海",
-            "半导体"
-          ],
-          "impact": "台海风险的传导路径：半导体供应链（先进制程产能）→ 航运（台湾海峡、巴士海峡）→ 外资风险偏好。多数情形是情绪冲击，实质断供才会重定价。",
+          "title": "若此人2028竞选成功，和平统一窗口或完全关闭，解放军已亮明底线 - 搜狐网",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOX0liem1DU0ZiN1c1UGpMY3lrUGdIZEl6ck15RlRxakVYZU05YzlEUVlwNXp1cFFWc0puWFFOOHFhSE1SdUFIY2VxdG1XZXFwcWlUemFFbkRtMFl5TVB6YXFtUEJyMDFlMkxkdmtFTTdGbG1kUDdaSlVyRnVWUnVrNzRpb1BQdXVtTmxLUw?oc=5",
+          "publishedAt": "2026-10-31T11:15:09.000Z",
+          "source": "搜狐网",
+          "score": 20,
+          "summary": "若此人2028竞选成功，和平统一窗口或完全关闭，解放军已亮明底线 &nbsp;&nbsp;搜狐网",
+          "excerpt": "",
+          "tags": [],
+          "impact": "台海事件先影响半导体供应链与航运风险溢价，再看外资流向。",
           "alsoCount": 1,
           "importance": 3,
-          "id": "e735235fc7e1",
+          "id": "f3cadfc9966c",
           "context": "",
           "ai": false
         },
@@ -1324,7 +1334,7 @@
           "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNclZhNXAzdVk5RXh1MnJsLU1lM3h0SnBSYzdnOU5FZUJlLXhWOGtoYTBJWUJNLWVSY080WTF6YW8tNE1Tbk5qMHZVdEc4d2Raak9sZEN1eDRZNlp0czRZYUdYazYzXzZJUEFsd3dTRkJBTktvT21zVTg3Zk45SGtGMDN2UkJHM192aWY1Mw?oc=5",
           "publishedAt": "2026-10-31T07:38:00.000Z",
           "source": "搜狐网",
-          "score": 19,
+          "score": 18,
           "summary": "陆委会接连又放口风，民进党真不搞独了吗，苏起称拖不过2028 &nbsp;&nbsp;搜狐网",
           "excerpt": "",
           "tags": [],
@@ -1343,6 +1353,61 @@
       "desc": "央行加息、利率决议、全球紧缩与债市反应",
       "items": [
         {
+          "title": "日本央行按兵不动“鹰”声不减：通胀风险抬头，12月加息渐近 - 新浪财经",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE82U0VQanQtczhXUWEySEZqcGpxYTN3VVY0MWdwQUNuNFBOV09JaDE5MmxvdEF5bFo3R0kwSlRucWg0WGhma1JpN2NFWVRzOW5XZDZDQURmUzNkY01LWTdyQ3kyREtPc0o3OFJ5TjVnYnhpTmlfTXV1OA?oc=5",
+          "publishedAt": "2026-10-31T08:56:59.000Z",
+          "source": "新浪财经",
+          "score": 29,
+          "summary": "日本央行按兵不动“鹰”声不减：通胀风险抬头，12月加息渐近 &nbsp;&nbsp;新浪财经",
+          "excerpt": "",
+          "tags": [
+            "利率",
+            "流动性"
+          ],
+          "impact": "利率是估值之锚：降息预期升温利多成长股与黄金、利空美元；但若因衰退而降息，风险资产未必受益。看 2 年期美债与政策指引，而不是单次操作。",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "5b3341408dc0",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "英国利率决议前，央行行长淡化通胀威胁：二次效应仍“相对温和” - 富途牛牛",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWDR1RWp1Q2I4b0J6R1dvVGJTaUVqbXlwMjMwZkpKalNaem8yTE1vWGtkQXRtdzZoY2FHREVqcjc3NnlSbVczMl9ScjFLMjQ1ODBmYUV5R0hwVjJyREVzLUY4SUxTM3dKbS0tZnlLNF9UOV9yQXZ1NnZGOGNwQ0FEeE9WcXUzQXh1U3lJc3FSSUxqaHh5dE9jLQ?oc=5",
+          "publishedAt": "2026-10-31T04:41:44.000Z",
+          "source": "富途牛牛",
+          "score": 27,
+          "summary": "英国利率决议前，央行行长淡化通胀威胁：二次效应仍“相对温和” &nbsp;&nbsp;富途牛牛",
+          "excerpt": "",
+          "tags": [
+            "利率",
+            "流动性"
+          ],
+          "impact": "利率是估值之锚：降息预期升温利多成长股与黄金、利空美元；但若因衰退而降息，风险资产未必受益。看 2 年期美债与政策指引，而不是单次操作。",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "8c592f603c1a",
+          "context": "",
+          "ai": false
+        },
+        {
+          "title": "Bank of Japan Declares Inflation Win, Clearing Way for Rate Hikes - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWnJWU0FUQ3RzZzNCVjVCREZiMTJvOGI5UjU1VmlwR2lmYThxSGt2LS10eTEzd054TXpCVjhnRFlVcDBWYjAxOHRSSFZKdlVqMGJ0WDJGck43cTFGRXRiYW1TYTlrZUVEdEJVWVdCZjI4ZUV0czFUOC15dG9FYlpwRk5FOHFNR25RbWhrRVVPVlVkcWJUTGtrNVlzMnFaa1JjOGtrQjRLWG5JTnBrMi1R?oc=5",
+          "publishedAt": "2026-10-31T23:08:33.000Z",
+          "source": "WSJ",
+          "score": 26,
+          "summary": "Bank of Japan Declares Inflation Win, Clearing Way for Rate Hikes &nbsp;",
+          "excerpt": "",
+          "tags": [],
+          "impact": "",
+          "alsoCount": 1,
+          "importance": 2,
+          "id": "69c413d850ab",
+          "context": "",
+          "ai": false,
+          "titleZh": "日本央行宣布通货膨胀获胜，为加息扫清障碍-《华尔街日报》"
+        },
+        {
           "title": "US Jobs Pickup May Keep Fed on Track to Hike Rates Again - Bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSjA5czFvNHJVY3pfd3I2ZGt0eGlkWDZCa3llcU5VRjUxV3pHc2pOUFI5NGZERThCY0lZNkJQZXFPMUphdmw4OEJOV2V2blZ2NGlDakI4NDRVM3VYR0ViSkhGbS1SR2Q0Sk03TmFRd1FvOW90U1Q4TnJYVFJIbVpUSEhpMTVMUmNrbGxpNldwOUZTbXVjV3hpTVV5d00tRHpPOHVJdmVOaEM1ZWc?oc=5",
           "publishedAt": "2026-10-31T20:00:00.000Z",
@@ -1356,8 +1421,151 @@
           ],
           "impact": "利率是估值之锚：降息预期升温利多成长股与黄金、利空美元；但若因衰退而降息，风险资产未必受益。看 2 年期美债与政策指引，而不是单次操作。",
           "alsoCount": 1,
-          "importance": 3,
+          "importance": 2,
           "id": "d6d67c40c91e",
+          "context": "",
+          "ai": false,
+          "titleZh": "美国就业回升可能使美联储再次加息- Bloomberg.com"
+        },
+        {
+          "title": "'The Fed put is very much back': Wall Street strategists weigh central bank's next move - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOUVJyRm4wTnJjSmtiU3lKWWZ5WVFndHdqWGlsZzVHd3BRdEhQa2o0UnRablMyblVsbHl0MDVwTFhPRGdCemo1ODhjUGl5ZEJPLUdSQk0taHZCSG4zUV94YXlSeXBLSFV3c3FOdTdvSmhpSkh5Q25STW9sRVI3Tk44TmdQYWIxOF9LeEV0VnVyQVptdTJkaVVCeXhiZlVqb19NYmktQUJ0NldISmpnNFoyTUROYWZuLUd4WUxoT1BMWmJrNGtYcVNab19QZElzaFNwc1N5MUVEVQ?oc=5",
+          "publishedAt": "2026-10-31T15:53:53.000Z",
+          "source": "Yahoo Finance",
+          "score": 22,
+          "summary": "'The Fed put is very much back': Wall Street strategists weigh central bank's next move &nbsp;",
+          "excerpt": "",
+          "tags": [
+            "利率",
+            "流动性"
+          ],
+          "impact": "利率是估值之锚：降息预期升温利多成长股与黄金、利空美元；但若因衰退而降息，风险资产未必受益。看 2 年期美债与政策指引，而不是单次操作。",
+          "alsoCount": 1,
+          "importance": 2,
+          "id": "9e4d764ddf97",
+          "context": "",
+          "ai": false,
+          "titleZh": "“美联储的看跌幅度很大” ：华尔街策略师权衡央行的下一步行动-雅虎财经"
+        },
+        {
+          "title": "Federal Reserve Releases Interest Rate Decision - The Presidential Prayer Team",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbUVDM0hOS2pBZ2owQWFjektBYWFUUS0tY1NKVkhlN0xVaXlhR0tfOXhEc2JyeFA5ZlpycGpnTFQ0VzdCZFhDUTZYbklNMlNFYVBJZGY3TEE3TzZpVEU5NXY4Qjg3dEhPM19uZlZiUjFaY3NXSmtJQ1o1NlRoTTdBaDIwLTI2dGU3ak10SkVMUVpMazVOUlVXNktQMlhET3M?oc=5",
+          "publishedAt": "2026-10-31T08:30:00.000Z",
+          "source": "The Presidential Prayer Team",
+          "score": 19,
+          "summary": "Federal Reserve Releases Interest Rate Decision &nbsp;&nbsp;The Presidential Prayer Team",
+          "excerpt": "",
+          "tags": [],
+          "impact": "",
+          "alsoCount": 1,
+          "importance": 2,
+          "id": "b2f2d279ef5a",
+          "context": "",
+          "ai": false,
+          "titleZh": "美联储发布利率决定--总统祈祷小组"
+        }
+      ]
+    },
+    {
+      "id": "routes",
+      "name": "航线",
+      "desc": "国际航线恢复、绕行、运力与运价",
+      "items": []
+    },
+    {
+      "id": "surcharge",
+      "name": "燃油附加费",
+      "desc": "航空燃油附加费调整、航油价格",
+      "items": []
+    },
+    {
+      "id": "copper",
+      "name": "铜",
+      "desc": "铜价、铜精矿、库存与冶炼",
+      "items": [
+        {
+          "title": "Uranium shares slide even as analysts see tighter supply",
+          "url": "https://www.mining.com/uranium-shares-slide-even-as-analysts-see-tighter-supply/",
+          "publishedAt": "2026-10-30T21:11:00.000Z",
+          "source": "未知来源",
+          "score": 16,
+          "summary": "The near-term market is better supplied than the longer-term outlook might suggest.",
+          "excerpt": "",
+          "tags": [],
+          "impact": "",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "e487e3fe2259",
+          "context": "",
+          "ai": false,
+          "titleZh": "尽管分析师认为铀供应收紧，但铀股仍下跌"
+        }
+      ]
+    },
+    {
+      "id": "hog",
+      "name": "生猪",
+      "desc": "猪价、能繁母猪、养殖利润与期货",
+      "items": [
+        {
+          "title": "磨底12个月创历史纪录，猪周期反转在即？ - 证券市场周刊",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0wOGxaaHQ3Zlpib2RwRXFUcXVScGZXbEZGT0ZDUlBEdElNYVBlS1hnQV9qanFubDE5OThEd1hIa0tDSEF6QnRRUEFiVE5xOVFjaW9hVlhvS09tUFJ0bURwT1VXd0FyZw?oc=5",
+          "publishedAt": "2026-10-31T03:13:00.000Z",
+          "source": "证券市场周刊",
+          "score": 16,
+          "summary": "磨底12个月创历史纪录，猪周期反转在即？&nbsp;&nbsp;证券市场周刊",
+          "excerpt": "",
+          "tags": [],
+          "impact": "",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "e68a189bb410",
+          "context": "",
+          "ai": false
+        }
+      ]
+    },
+    {
+      "id": "pork",
+      "name": "猪肉",
+      "desc": "猪肉价格、消费、进口与 CPI",
+      "items": [
+        {
+          "title": "日本牛肉、鸡肉价格持续上涨 猪肉价格反而更低，餐饮业转向猪肉应对成本压力 - 旅日侨网",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNYlZIbklSUFdTVFZVYlJuVzhSX3M1WDFhVE9tYVc5VHBTcEpsNWIzZWItX25YeHBkS3B5Y3I1b2xpLW9DLWtsX0hHcVlnMUVTZktlUkJsLXhUVkp0MmFuaEpPVFhEd0RrdFRwVTZoMDVXS3BJT3lSQmVBSC1TMHFiTTlhdUlsb1ZuNUE?oc=5",
+          "publishedAt": "2026-10-31T13:15:34.000Z",
+          "source": "旅日侨网",
+          "score": 21,
+          "summary": "日本牛肉、鸡肉价格持续上涨 猪肉价格反而更低，餐饮业转向猪肉应对成本压力 &nbsp;&nbsp;旅日侨网",
+          "excerpt": "",
+          "tags": [],
+          "impact": "",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "a01e127acc48",
+          "context": "",
+          "ai": false
+        }
+      ]
+    },
+    {
+      "id": "vaccine",
+      "name": "疫苗",
+      "desc": "疫苗研发、批签发、接种与采购",
+      "items": [
+        {
+          "title": "HPV疫苗“不好卖”，三家企业急寻增量故事 - 新浪新闻_手机新浪网",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8yeHVVR0xlaDRYcHhZX0FJem0yYXdCM0RWVWQ3RlZMajdadWVhMnNqTmZORGdNU3JpM3g3WnB2S0w2ZExpR1U1OTdTb3l2MlNUUWxzdU9ONVpYN3pGTkthdnlxTzV4OFJYOVNUa2hJSk1pR3dF?oc=5",
+          "publishedAt": "2026-10-31T06:22:30.000Z",
+          "source": "新浪新闻_手机新浪网",
+          "score": 18,
+          "summary": "HPV疫苗“不好卖”，三家企业急寻增量故事 &nbsp;&nbsp;新浪新闻_手机新浪网",
+          "excerpt": "",
+          "tags": [],
+          "impact": "",
+          "alsoCount": 1,
+          "importance": 3,
+          "id": "aa8af5f198ec",
           "context": "",
           "ai": false
         }
